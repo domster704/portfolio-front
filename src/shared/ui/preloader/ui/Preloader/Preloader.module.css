@@ -1,0 +1,30 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding-block: 10%;
+
+  img {
+    width: 11.25rem;
+    height: 7.5rem;
+    margin-block: auto;
+  }
+
+  b {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    color: #1d1d1d;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #1d1d1d;
+  }
+}
