@@ -1,0 +1,49 @@
+import type {Metadata, Viewport} from "next";
+import {NextAppProvider} from "@app/providers/NextAppProvider";
+import "../globals.scss";
+import "../ui-kit.scss";
+import {FC} from "react";
+import {hasLocale} from "next-intl";
+import {routing} from "@i18n/routing";
+import {notFound} from "next/navigation";
+
+export const metadata: Metadata = {
+  title: "Портфолио",
+  description: "Сайт-портфолио Fullstack разработчика и программиста Исупова Григория",
+  manifest: "/manifest.webmanifest",
+
+  icons: {
+    icon: [
+      {
+        url: "/favicon.ico",
+        type: "image/x-icon",
+      },
+    ],
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
+const RootLayout: FC<LayoutProps<"/[locale]">> = async ({
+                                                          children,
+                                                          params
+                                                        }) => {
+  const {locale} = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  return (
+    <html lang={locale} suppressHydrationWarning>
+    <body suppressHydrationWarning>
+
+    <NextAppProvider>{children}</NextAppProvider>
+
+    </body>
+    </html>
+  );
+}

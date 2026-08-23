@@ -1,0 +1,12 @@
+{
+  "Header": {
+    "about": "Обо мне",
+    "skills": "Навыки",
+    "experience": "Опыт",
+    "education": "Образование",
+    "projects": "Проекты",
+    "research": "Исследования",
+    "blog": "Блог",
+    "contacts": "Контакты"
+  }
+}

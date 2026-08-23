@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import style from "./Header.module.scss";
-import {ThemeToggle} from "@shared/ui/theme-toggle/ui/ThemeToggle";
+import { ThemeToggle } from "@shared/ui/theme-toggle/ui/ThemeToggle";
 
 interface HeaderProps {}
 

@@ -1,0 +1,12 @@
+{
+  "Header": {
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "projects": "Projects",
+    "research": "Research",
+    "blog": "Blog",
+    "contacts": "Contacts"
+  }
+}
