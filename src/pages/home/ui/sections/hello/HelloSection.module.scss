@@ -17,6 +17,12 @@
   white-space: nowrap;
 }
 
+.year {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -25,4 +31,8 @@
 
 .title {
   //transform: translateY(-10%);
+}
+
+.description {
+  max-width: 700px;
 }

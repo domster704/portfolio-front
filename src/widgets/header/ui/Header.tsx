@@ -11,7 +11,7 @@ const Header: FC = ({}) => {
     <header className={style.header}>
       <Wrapper className={style.headerInner}>
         <a href="#top" className={style.logo}>
-          domster704
+          Domster704.
         </a>
 
         <ul className={style.links}>

@@ -10,9 +10,18 @@
     "contacts": "Contacts"
   },
   "Hello": {
-    "status": "Project",
+    "status": "5 years",
+    "status_info": "Commercial experience",
     "job-name": "Full Stack Developer",
     "title": "Hello",
-    "description": "— It's Grigoriy"
+    "description": "I’m Grigory, a software engineer focused on backend systems, architecture, and infrastructure — from the first design decisions to deployment and production support."
+  },
+  "About": {
+    "title": "Development, end-to-end.",
+    "description": {
+      "1": "I am a Full-Stack Developer with nearly five years of commercial experience. My primary focus is backend development, application and infrastructure architecture, and the full development lifecycle — from data modeling and API design to deployment, monitoring, and maintenance.",
+      "2": "My core stack includes FastAPI, PostgreSQL, Redis, TypeScript, React, and Next.js. I design microservice-based systems using DDD and Clean Architecture principles and work with Docker, Nginx, Ansible, and CI/CD. I care not only about delivering functionality, but also about building solutions that are clear, maintainable, and ready to evolve.",
+      "3": "Alongside my work as a developer, I write research papers in the field of distributed systems. I am also a first-place winner of the LCT Hackathon 2025 and a third-place winner in 2024."
+    }
   }
 }
