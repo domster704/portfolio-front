@@ -4,15 +4,15 @@ import "./globals.scss";
 import "./ui-kit.scss";
 
 export const metadata: Metadata = {
-  title: "NTV Club",
-  description: "NTV Club",
+  title: "Портфолио",
+  description: "Сайт-портфолио Fullstack разработчика и программиста Исупова Григория",
   manifest: "/manifest.webmanifest",
 
   icons: {
     icon: [
       {
-        url: "/favicon.webp",
-        type: "image/webp",
+        url: "/favicon.ico",
+        type: "image/x-icon",
       },
     ],
   },
@@ -30,11 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" suppressHydrationWarning>
-    <body suppressHydrationWarning>
+      <body suppressHydrationWarning>
 
-    <NextAppProvider>{children}</NextAppProvider>
+      <NextAppProvider>{children}</NextAppProvider>
 
-    </body>
+      </body>
     </html>
   );
 }

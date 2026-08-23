@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  padding: 1.25rem 0;
+
+  background: var(--header-background);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+
+  transition: background 0.3s ease;
+}
+
+.headerInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+
+  a {
+    font-size: 0.875rem;
+    color: var(--primary);
+    transition: opacity 0.2s ease;
+  }
+}
