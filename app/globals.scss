@@ -1,4 +1,6 @@
 :root {
+  --font-family: Inter;
+
   --max-width: 1280px;
 
   --section-pad: clamp(72px, 10vw, 140px);
@@ -13,9 +15,9 @@
   --foreground: #171717;
 
   --primary: #222222;
-  --secondary: #7B7B7B;
-  --tertiary: #F8F8F8;
-  --white: #FFFFFF;
+  --secondary: #7b7b7b;
+  --tertiary: #f8f8f8;
+  --white: #ffffff;
 
   --border: rgba(34, 34, 34, 0.08);
   --header-background: rgba(248, 248, 248, 0.82);
@@ -50,10 +52,11 @@ body {
 }
 
 body {
+  font-family: var(--font-inter), sans-serif;
+
   color: var(--primary);
   background: var(--tertiary);
 
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

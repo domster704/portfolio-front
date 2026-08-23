@@ -1,2 +1,17 @@
-.content {
+.lightIcon {
+  display: inline;
+}
+
+.darkIcon {
+  display: none;
+}
+
+:global([data-theme="dark"]) {
+  .lightIcon {
+    display: none;
+  }
+
+  .darkIcon {
+    display: inline;
+  }
 }

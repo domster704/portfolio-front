@@ -1,10 +1,11 @@
 import { type FC } from "react";
 import style from "./Header.module.scss";
 import { ThemeToggle } from "@shared/ui/theme-toggle/ui/ThemeToggle";
+import { useTranslations } from "next-intl";
 
-interface HeaderProps {}
+const Header: FC = ({}) => {
+  const t = useTranslations("Header");
 
-const Header: FC<HeaderProps> = ({}) => {
   return (
     <header className={style.header}>
       <nav className={style.headerInner}>
@@ -14,28 +15,28 @@ const Header: FC<HeaderProps> = ({}) => {
 
         <ul className={style.links}>
           <li>
-            <a href="#about">About</a>
+            <a href="#about">{t("about")}</a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a href="#skills">{t("skills")}</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a href="#experience">{t("experience")}</a>
           </li>
           <li>
-            <a href="#education">Education</a>
+            <a href="#education">{t("education")}</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects">{t("projects")}</a>
           </li>
           <li>
-            <a href="#research">Research</a>
+            <a href="#research">{t("research")}</a>
           </li>
           <li>
-            <a href="#blog">Blog</a>
+            <a href="#blog">{t("blog")}</a>
           </li>
           <li>
-            <a href="#contacts">Contacts</a>
+            <a href="#contacts">{t("contacts")}</a>
           </li>
         </ul>
 

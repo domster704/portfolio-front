@@ -1,29 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import styles from "./ThemeToggle.module.scss";
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { setTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const toggleTheme = () => {
+    const isDark = document.documentElement.dataset.theme === "dark";
 
-  if (!mounted) {
-    return <button disabled>◐</button>;
-  }
-
-  const isDark = resolvedTheme === "dark";
+    setTheme(isDark ? "light" : "dark");
+  };
 
   return (
     <button
+      className={styles.toggle}
       type="button"
       aria-label="Toggle theme"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+      onClick={toggleTheme}
     >
-      {isDark ? "L" : "D"}
+      <span className={styles.lightIcon}>☀️</span>
+      <span className={styles.darkIcon}>🌙</span>
     </button>
   );
 }
