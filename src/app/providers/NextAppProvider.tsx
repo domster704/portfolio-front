@@ -11,7 +11,7 @@ export function NextAppProvider({ children }: NextAppProviderProps) {
   return (
     <ThemeProvider
       attribute={"data-theme"}
-      defaultTheme={"system"}
+      defaultTheme={"light"}
       enableSystem={true}
       disableTransitionOnChange={true}
     >

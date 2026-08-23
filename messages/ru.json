@@ -8,5 +8,11 @@
     "research": "Исследования",
     "blog": "Блог",
     "contacts": "Контакты"
+  },
+  "Hello": {
+    "status": "Проектов",
+    "job-name": "Full Stack разработчик",
+    "title": "Привет",
+    "description": "— я Григорий"
   }
 }

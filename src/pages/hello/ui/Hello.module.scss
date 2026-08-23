@@ -1,0 +1,28 @@
+.hello {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.slide {
+  position: absolute;
+  top: 50%;
+  left: 2rem;
+
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  //transform: translateY(-10%);
+}

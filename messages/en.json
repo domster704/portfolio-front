@@ -8,5 +8,11 @@
     "research": "Research",
     "blog": "Blog",
     "contacts": "Contacts"
+  },
+  "Hello": {
+    "status": "Project",
+    "job-name": "Full Stack Developer",
+    "title": "Hello",
+    "description": "— It's Grigoriy"
   }
 }

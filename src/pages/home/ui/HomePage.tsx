@@ -1,10 +1,12 @@
 import { type FC } from "react";
-import style from "./HomePage.module.scss";
+import Hello from "@pages/hello";
 
-interface HomePageProps {}
-
-const HomePage: FC<HomePageProps> = ({}) => {
-  return <div className={style.content}>content</div>;
+const HomePage: FC = ({}) => {
+  return (
+    <>
+      <Hello />
+    </>
+  );
 };
 
 export default HomePage;

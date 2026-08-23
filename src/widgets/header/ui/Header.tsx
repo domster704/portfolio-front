@@ -2,13 +2,14 @@ import { type FC } from "react";
 import style from "./Header.module.scss";
 import { ThemeToggle } from "@shared/ui/theme-toggle/ui/ThemeToggle";
 import { useTranslations } from "next-intl";
+import Wrapper from "@shared/ui/wrapper";
 
 const Header: FC = ({}) => {
   const t = useTranslations("Header");
 
   return (
     <header className={style.header}>
-      <nav className={style.headerInner}>
+      <Wrapper className={style.headerInner}>
         <a href="#top" className={style.logo}>
           domster704
         </a>
@@ -43,7 +44,7 @@ const Header: FC = ({}) => {
         <div className={style.contacts}>
           <ThemeToggle />
         </div>
-      </nav>
+      </Wrapper>
     </header>
   );
 };

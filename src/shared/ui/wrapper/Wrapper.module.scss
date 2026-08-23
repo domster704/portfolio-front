@@ -1,24 +1,13 @@
 @use "@shared/styles/variables" as *;
 
 .wrapper {
-  padding: var(--body-padding-block) var(--body-padding-inline);
-  padding-top: 0;
-
-  width: 100%;
-}
-
-.wrapperContent {
-  width: 100%;
-  max-width: var(--wrapper-max-width);
-  margin-inline: auto;
-
-  &.withoutMaxWidth {
-    max-width: none;
-  }
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
 @media screen and (max-width: $mobile) {
   .wrapper {
-    width: 100%;
+    max-width: 100%;
   }
 }

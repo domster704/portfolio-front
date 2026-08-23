@@ -3,21 +3,12 @@ import style from "./Wrapper.module.scss";
 
 type WrapperProps = {
   children: ReactNode;
-  withoutMaxWidth?: boolean;
+  className?: string;
 };
 
-const Wrapper: FC<WrapperProps> = ({ children, withoutMaxWidth }) => {
+const Wrapper: FC<WrapperProps> = ({ children, className }) => {
   return (
-    <div className={style.wrapper}>
-      <div
-        className={[
-          style.wrapperContent,
-          withoutMaxWidth ? style.withoutMaxWidth : "",
-        ].join(" ")}
-      >
-        {children}
-      </div>
-    </div>
+    <div className={[style.wrapper, className ?? ""].join(" ")}>{children}</div>
   );
 };
 
