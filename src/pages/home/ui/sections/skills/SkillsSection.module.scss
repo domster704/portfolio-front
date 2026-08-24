@@ -14,7 +14,7 @@
 
   padding: 1.5rem 0;
 
-  animation: scroll 55s linear infinite;
+  animation: scroll 120s linear infinite;
 
   span {
     white-space: nowrap;
@@ -44,18 +44,20 @@
 .skillGroup {
   display: flex;
   flex-direction: column;
+  gap: 1.25rem;
 
   padding: 1.5rem;
 
   border: 1px solid var(--border);
   border-radius: 1rem;
 
-  gap: 1.25rem;
-
-  transition: border-color 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    transform 0.3s ease;
 
   &:hover {
     border-color: var(--secondary);
+    transform: translateX(2px) translateY(-2px);
   }
 }
 
@@ -117,7 +119,7 @@
   }
 
   .skillScroll {
-    animation-duration: 25s;
+    animation-duration: 75s;
   }
 }
 
