@@ -21,6 +21,12 @@
   letter-spacing: -0.02em;
 }
 
+.title-4 {
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
 .label {
   font-family: "JetBrains Mono", monospace;
 
