@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
 
-  padding-bottom: 0;
+  padding-bottom: var(--section-bottom-pad);
   padding-top: 0;
 }
 
@@ -19,7 +19,7 @@
 
 .year {
   position: absolute;
-  bottom: 2rem;
+  bottom: calc(2rem + var(--section-bottom-pad));
   left: 2rem;
 }
 

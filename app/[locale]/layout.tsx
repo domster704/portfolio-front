@@ -3,10 +3,11 @@ import { NextAppProvider } from "@app/providers/NextAppProvider";
 import "../globals.scss";
 import "../ui-kit.scss";
 import { FC } from "react";
-import { hasLocale } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@i18n/routing";
 import { notFound } from "next/navigation";
 import { inter } from "../fonts";
+import { getMessages } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Портфолио",
@@ -38,11 +39,21 @@ const RootLayout: FC<LayoutProps<"/[locale]">> = async ({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
+  const messages = await getMessages();
 
   return (
-    <html lang={locale} className={inter.variable} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={inter.variable}
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+    >
       <body suppressHydrationWarning>
-        <NextAppProvider>{children}</NextAppProvider>
+        <NextAppProvider>
+          <NextIntlClientProvider messages={messages}>
+            {children}
+          </NextIntlClientProvider>
+        </NextAppProvider>
       </body>
     </html>
   );

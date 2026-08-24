@@ -1,5 +1,4 @@
 import { type FC } from "react";
-import style from "./AboutSection.module.scss";
 import Section from "@shared/ui/section";
 import { useTranslations } from "next-intl";
 

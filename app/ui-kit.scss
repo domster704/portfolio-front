@@ -22,7 +22,7 @@
 }
 
 .label {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 
   font-size: 0.75rem;
   color: var(--secondary);
@@ -31,7 +31,7 @@
 }
 
 .text {
-  font-size: clamp(1rem, 1.25vw, 1.25rem);;
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   font-weight: 400;
   line-height: 1.75;
   color: var(--primary);
@@ -46,9 +46,6 @@
   }
 
   &.mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: "JetBrains Mono", monospace;
   }
 }
-
-
-

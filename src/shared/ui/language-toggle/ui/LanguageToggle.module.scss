@@ -1,0 +1,16 @@
+.content {
+  border: none;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--primary);
+
+  cursor: pointer;
+
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

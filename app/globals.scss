@@ -3,8 +3,9 @@
 
   --max-width: 1280px;
 
-  --section-pad: clamp(72px, 10vw, 140px);
-  --gutter: clamp(20px, 4vw, 48px);
+  --section-pad: clamp(4.5rem, 10vw, 8.75rem);
+  --section-bottom-pad: 3rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
 
   --line-height: 1.65;
 }

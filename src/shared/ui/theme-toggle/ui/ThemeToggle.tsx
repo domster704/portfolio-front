@@ -1,26 +1,15 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import styles from "./ThemeToggle.module.scss";
+import { useTheme } from "@app/providers/ThemeProvider";
 
-export function ThemeToggle() {
-  const { setTheme } = useTheme();
-
-  const toggleTheme = () => {
-    const isDark = document.documentElement.dataset.theme === "dark";
-
-    setTheme(isDark ? "light" : "dark");
-  };
+const ThemeToggle = () => {
+  const { toggleTheme, theme } = useTheme();
 
   return (
-    <button
-      className={styles.toggle}
-      type="button"
-      aria-label="Toggle theme"
-      onClick={toggleTheme}
-    >
-      <span className={styles.lightIcon}>☀️</span>
-      <span className={styles.darkIcon}>🌙</span>
+    <button type="button" aria-label="Toggle theme" onClick={toggleTheme}>
+      {theme === "light" ? "☀️" : "🌙"}
     </button>
   );
-}
+};
+
+export default ThemeToggle;

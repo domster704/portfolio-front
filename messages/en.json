@@ -14,7 +14,7 @@
     "status_info": "Commercial experience",
     "job-name": "Full Stack Developer",
     "title": "Hello",
-    "description": "I’m Grigory, a software engineer focused on backend systems, architecture, and infrastructure — from the first design decisions to deployment and production support."
+    "description": "I’m <strong>Grigory</strong>, a software engineer focused on backend systems, architecture, and infrastructure — from the first design decisions to deployment and production support."
   },
   "About": {
     "title": "Development, end-to-end.",

@@ -22,7 +22,9 @@ const HelloSection: FC = ({}) => {
 
           <h1 className={["title-1", style.title].join(" ")}>{t("title")}</h1>
           <p className={["text", style.description].join(" ")}>
-            {t("description")}
+            {t.rich("description", {
+              strong: (chunks) => <strong>{chunks}</strong>,
+            })}
           </p>
         </Wrapper>
       </div>

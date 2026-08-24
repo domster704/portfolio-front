@@ -3,6 +3,8 @@
 .section {
   display: grid;
   gap: 5rem;
+
+  padding-bottom: var(--section-bottom-pad);
 }
 
 .twoColumn {
