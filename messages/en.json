@@ -31,5 +31,9 @@
   "Experience": {
     "title": "My professional journey.",
     "label": "Experience"
+  },
+  "Education": {
+    "title": "Academic background.",
+    "label": "Education"
   }
 }
