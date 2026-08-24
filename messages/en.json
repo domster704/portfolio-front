@@ -23,5 +23,13 @@
       "2": "My core stack includes FastAPI, PostgreSQL, Redis, TypeScript, React, and Next.js. I design microservice-based systems using DDD and Clean Architecture principles and work with Docker, Nginx, Ansible, and CI/CD. I care not only about delivering functionality, but also about building solutions that are clear, maintainable, and ready to evolve.",
       "3": "Alongside my work as a developer, I write research papers in the field of distributed systems. I am also a first-place winner of the LCT Hackathon 2025 and a third-place winner in 2024."
     }
+  },
+  "Skills": {
+    "title": "Stack and tools.",
+    "label": "Technical skills"
+  },
+  "Experience": {
+    "title": "My professional journey.",
+    "label": "Experience"
   }
 }

@@ -1,6 +1,7 @@
 import { type FC } from "react";
 import Section from "@shared/ui/section";
 import { useTranslations } from "next-intl";
+import { SECTIONS } from "@shared/constants/sections";
 
 const AboutSection: FC = ({}) => {
   const t = useTranslations("About");
@@ -8,7 +9,7 @@ const AboutSection: FC = ({}) => {
 
   return (
     <Section
-      id={"about"}
+      id={SECTIONS.ABOUT}
       twoColumns
       title={t("title")}
       label={headerT("about")}
