@@ -12,9 +12,7 @@ export function MainLayout({ children }: MainLayoutProps) {
     <>
       <Header />
 
-      <Wrapper>
-        <Suspense fallback={<PreLoader />}>{children}</Suspense>
-      </Wrapper>
+      <Suspense fallback={<PreLoader />}>{children}</Suspense>
     </>
   );
 }
