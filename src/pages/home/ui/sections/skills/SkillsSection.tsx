@@ -9,7 +9,7 @@ import { SECTIONS } from "@shared/constants/sections";
 
 const SKILL_GROUPS = [
   {
-    title: "Backend",
+    titleKey: "backend",
     skills: [
       "Python",
       "FastAPI",
@@ -26,7 +26,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Frontend",
+    titleKey: "frontend",
     skills: [
       "JavaScript",
       "TypeScript",
@@ -41,7 +41,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Databases",
+    titleKey: "databases",
     skills: [
       "PostgreSQL",
       "MySQL",
@@ -55,7 +55,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Architecture",
+    titleKey: "architecture",
     skills: [
       "DDD",
       "Clean Architecture",
@@ -66,7 +66,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Security",
+    titleKey: "security",
     skills: [
       "JWT",
       "OAuth2",
@@ -77,7 +77,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Infrastructure",
+    titleKey: "infrastructure",
     skills: [
       "Docker",
       "Docker Compose",
@@ -95,7 +95,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Monitoring & Testing",
+    titleKey: "monitoringTesting",
     skills: [
       "PyTest",
       "Unit Testing",
@@ -106,7 +106,7 @@ const SKILL_GROUPS = [
     ],
   },
   {
-    title: "Tools",
+    titleKey: "tools",
     skills: ["Git", "Bash", "Postman", "net-tools"],
   },
 ] as const;
@@ -132,8 +132,8 @@ const SkillsSection: FC = () => {
         <Section id={SECTIONS.SKILLS} title={t("title")} label={t("label")}>
           <div className={style.skillsGrid}>
             {SKILL_GROUPS.map((group) => (
-              <article key={group.title} className={style.skillGroup}>
-                <h4 className={"title-4"}>{group.title}</h4>
+              <article key={group.titleKey} className={style.skillGroup}>
+                <h4 className={"title-4"}>{t(`groups.${group.titleKey}`)}</h4>
 
                 <div className={style.skillList}>
                   {group.skills.map((skill) => (

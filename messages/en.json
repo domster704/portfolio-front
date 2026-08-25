@@ -26,7 +26,17 @@
   },
   "Skills": {
     "title": "Stack and engineering expertise.",
-    "label": "Skills"
+    "label": "Skills",
+    "groups": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "databases": "Databases",
+      "architecture": "Architecture",
+      "security": "Security",
+      "infrastructure": "Infrastructure",
+      "monitoringTesting": "Monitoring & Testing",
+      "tools": "Tools"
+    }
   },
   "Experience": {
     "title": "My professional journey.",

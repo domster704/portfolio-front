@@ -26,7 +26,17 @@
   },
   "Skills": {
     "title": "Технологии и инженерные компетенции.",
-    "label": "Навыки"
+    "label": "Навыки",
+    "groups": {
+      "backend": "Backend",
+      "frontend": "Frontend",
+      "databases": "Базы данных",
+      "architecture": "Архитектура",
+      "security": "Безопасность",
+      "infrastructure": "Инфраструктура",
+      "monitoringTesting": "Мониторинг и тестирование",
+      "tools": "Инструменты"
+    }
   },
   "Experience": {
     "title": "Профессиональный путь.",

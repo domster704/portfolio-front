@@ -10,12 +10,18 @@ interface ExperienceItemProps {
 const ExperienceItem: FC<ExperienceItemProps> = ({ item }) => {
   return (
     <article className={style.experienceItem}>
-      <span className={"label"}>{item.date}</span>
+      <span className={["label", style.experienceDates].join(" ")}>
+        {item.date}
+      </span>
 
       <div>
         <h3 className={"title-3"}>{item.position}</h3>
         {item.companyURL ? (
-          <a href={item.companyURL} className={"text secondary"}>
+          <a
+            href={item.companyURL}
+            target={"_blank"}
+            className={"text secondary"}
+          >
             {item.companyName}
           </a>
         ) : (
@@ -30,12 +36,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ item }) => {
         ></div>
         <br />
 
-        <p className={"label lower"}>
-          {item.skills.map((skill, index) => {
-            const end = index === item.skills.length - 1 ? "" : " · ";
-            return skill + end;
-          })}
-        </p>
+        <p className={"label"}>{item.skills.join("\u00A0· ")}</p>
       </div>
     </article>
   );
