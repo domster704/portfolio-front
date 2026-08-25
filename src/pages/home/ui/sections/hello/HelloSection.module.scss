@@ -1,3 +1,5 @@
+@use "@shared/styles/variables" as *;
+
 .hello {
   min-height: 100vh;
   display: flex;
@@ -19,7 +21,7 @@
 
 .year {
   position: absolute;
-  bottom: calc(2rem + var(--section-pad));
+  bottom: var(--section-pad);
   left: 2rem;
 }
 
@@ -35,4 +37,11 @@
 
 .description {
   max-width: 700px;
+}
+
+@media screen and (max-width: $mobile) {
+  .slide,
+  .year {
+    display: none;
+  }
 }

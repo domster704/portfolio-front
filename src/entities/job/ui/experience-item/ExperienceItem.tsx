@@ -32,9 +32,10 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ item }) => {
             __html: sanitizeHtml(item.about),
           }}
         ></div>
-        <br />
 
-        <p className={"label"}>{item.skills.join("\u00A0· ")}</p>
+        <p className={["label", style.skills].join(" ")}>
+          {item.skills.join("\u00A0· ")}
+        </p>
       </div>
     </article>
   );

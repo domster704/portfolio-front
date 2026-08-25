@@ -23,7 +23,15 @@
 }
 
 @media (max-width: $mobile) {
+  .section {
+    gap: 1.5rem;
+  }
+
   .twoColumn {
     grid-template-columns: 1fr;
+  }
+
+  .headerSection {
+    margin-bottom: 0;
   }
 }

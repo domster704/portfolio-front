@@ -5,7 +5,7 @@ import {
   type ReactNode,
   useContext,
   useEffect,
-  useState,
+  useSyncExternalStore,
 } from "react";
 
 type Theme = "light" | "dark";
@@ -17,14 +17,13 @@ type ThemeContextValue = {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") {
-    return "light";
-  }
+const THEME_KEY = "theme";
+const THEME_EVENT = "theme-change";
 
-  const saved = localStorage.getItem("theme") as Theme | null;
+function getTheme(): Theme {
+  const saved = localStorage.getItem(THEME_KEY);
 
-  if (saved) {
+  if (saved === "light" || saved === "dark") {
     return saved;
   }
 
@@ -33,16 +32,34 @@ function getInitialTheme(): Theme {
     : "light";
 }
 
+function getServerTheme(): Theme {
+  return "light";
+}
+
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  window.addEventListener(THEME_EVENT, callback);
+
+  return () => {
+    window.removeEventListener("storage", callback);
+    window.removeEventListener(THEME_EVENT, callback);
+  };
+}
+
+function setTheme(theme: Theme) {
+  localStorage.setItem(THEME_KEY, theme);
+  window.dispatchEvent(new Event(THEME_EVENT));
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const theme = useSyncExternalStore(subscribe, getTheme, getServerTheme);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((current) => (current === "light" ? "dark" : "light"));
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (

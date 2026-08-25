@@ -1,3 +1,5 @@
+@use "@shared/styles/variables" as *;
+
 .header {
   position: fixed;
   top: 0;
@@ -10,6 +12,7 @@
   background: var(--header-background);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+
   border-bottom: 1px solid var(--border);
 
   transition: background 0.3s ease;
@@ -17,23 +20,37 @@
 
 .headerInner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+
+  gap: 1.5rem;
 }
 
 .links {
   display: flex;
+  align-items: center;
+
   gap: 2rem;
+
   list-style: none;
 
   a {
     font-size: 0.875rem;
     color: var(--primary);
+
+    white-space: nowrap;
+
     transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 
 .logo {
+  flex-shrink: 0;
+
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -41,5 +58,95 @@
 .contacts {
   display: flex;
   align-items: center;
+
+  flex-shrink: 0;
+
   gap: 0.5rem;
+}
+
+/* Tablet */
+@media screen and (max-width: $tablet) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .headerInner {
+    gap: 1rem;
+  }
+
+  .links {
+    gap: 1.25rem;
+
+    a {
+      font-size: 0.8rem;
+    }
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .contacts {
+    gap: 0.35rem;
+  }
+}
+
+/* Small tablet */
+@media screen and (max-width: $smallTablet) {
+  .headerInner {
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .contacts {
+    order: 2;
+  }
+
+  .links {
+    order: 3;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    gap: 1.5rem;
+
+    padding-bottom: 0.25rem;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: $mobile) {
+  .header {
+    padding: 0.85rem 0;
+  }
+
+  .headerInner {
+    gap: 0.75rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .links {
+    gap: 1.25rem;
+
+    a {
+      font-size: 0.75rem;
+    }
+  }
+
+  .contacts {
+    gap: 0.25rem;
+  }
 }

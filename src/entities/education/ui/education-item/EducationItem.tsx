@@ -35,8 +35,6 @@ const EducationItem: FC<EducationItemProps> = ({ item, index }) => {
               className={style.name}
             >
               <h3 className="title-3">{item.name}</h3>
-
-              <span aria-hidden="true">↗</span>
             </a>
 
             <h4 className={["label section", style.specialization].join(" ")}>

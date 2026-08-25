@@ -1,3 +1,5 @@
+@use "@shared/styles/variables" as *;
+
 .skillGroup {
   display: flex;
   flex-direction: column;
@@ -52,5 +54,12 @@
     color: var(--tertiary);
     transform: translateY(-2px);
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .skillGroup {
+    gap: 1rem;
+    padding: 1rem;
   }
 }
