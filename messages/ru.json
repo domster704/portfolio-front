@@ -1,4 +1,10 @@
 {
+  "Metadata": {
+    "home": {
+      "title": "Григорий Исупов — Full Stack разработчик",
+      "description": "Портфолио Григория Исупова — Full Stack разработчика с фокусом на backend, архитектуру и инфраструктуру. Python, FastAPI, PostgreSQL, TypeScript, React, Next.js, Docker и DevOps."
+    }
+  },
   "Header": {
     "about": "Обо мне",
     "skills": "Навыки",
@@ -10,6 +16,7 @@
     "contacts": "Контакты"
   },
   "Hello": {
+    "seoTitle": "Григорий Исупов — Full Stack разработчик",
     "status": "5 лет",
     "status_info": "Коммерческого опыта",
     "job-name": "Full Stack разработчик",

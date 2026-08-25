@@ -21,7 +21,11 @@ const HelloSection: FC = ({}) => {
           <p className={"label section"}>{t("status_info")}</p>
         </div>
 
-        <h1 className={["title-1", style.title].join(" ")}>{t("title")}</h1>
+        <p aria-hidden="true" className={["title-1", style.title].join(" ")}>
+          {t("title")}
+        </p>
+        <h1 className={style.visuallyHidden}>{t("seoTitle")}</h1>
+
         <p className={["text", style.description].join(" ")}>
           {t.rich("description", {
             strong: (chunks) => <strong>{chunks}</strong>,

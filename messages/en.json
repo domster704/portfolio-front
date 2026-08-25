@@ -1,4 +1,10 @@
 {
+  "Metadata": {
+    "home": {
+      "title": "Grigory Isupov — Full Stack Developer",
+      "description": "Portfolio of Grigory Isupov, a Full Stack Developer focused on backend engineering, software architecture and infrastructure. Python, FastAPI, PostgreSQL, TypeScript, React, Next.js, Docker and DevOps."
+    }
+  },
   "Header": {
     "about": "About",
     "skills": "Skills",
@@ -10,6 +16,7 @@
     "contacts": "Contacts"
   },
   "Hello": {
+    "seoTitle": "Grigory Isupov — Full Stack Developer",
     "status": "5 years",
     "status_info": "Commercial experience",
     "job-name": "Full Stack Developer",

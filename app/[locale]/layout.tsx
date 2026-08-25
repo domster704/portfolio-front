@@ -8,20 +8,30 @@ import { routing } from "@i18n/routing";
 import { notFound } from "next/navigation";
 import { inter } from "../fonts";
 import { getMessages } from "next-intl/server";
+import { SITE_URL } from "@shared/constants/seo";
 
 export const metadata: Metadata = {
-  title: "Портфолио",
-  description:
-    "Сайт-портфолио Fullstack разработчика и программиста Исупова Григория",
+  metadataBase: new URL(SITE_URL),
+
+  applicationName: "Grigory Isupov — Portfolio",
+
   manifest: "/manifest.webmanifest",
 
   icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        type: "image/x-icon",
-      },
-    ],
+    icon: "/favicon.ico",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
