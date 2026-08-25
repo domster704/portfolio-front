@@ -1,4 +1,4 @@
-import { type FC, ReactNode } from "react";
+import {type FC, ReactNode} from "react";
 import style from "./Section.module.scss";
 
 interface SectionProps {

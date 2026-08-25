@@ -1,8 +1,5 @@
-import {
-  Experience,
-  experiencesSchema,
-} from "@entities/job/model/experience.schema";
-import { $apiURL } from "@shared/constants/api";
+import {Experience, experiencesSchema,} from "@entities/job/model/experience.schema";
+import {$apiURL} from "@shared/constants/api";
 
 export async function getAllExperience(locale: string): Promise<Experience[]> {
   const response = await fetch(`${$apiURL}/jobs?locale=${locale}`, {
@@ -16,6 +13,5 @@ export async function getAllExperience(locale: string): Promise<Experience[]> {
   }
 
   const data = await response.json();
-  console.log(data.data);
   return experiencesSchema.parse(data.data);
 }

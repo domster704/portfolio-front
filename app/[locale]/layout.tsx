@@ -1,13 +1,13 @@
-import type { Metadata, Viewport } from "next";
-import { NextAppProvider } from "@app/providers/NextAppProvider";
+import type {Metadata, Viewport} from "next";
+import {NextAppProvider} from "@app/providers/NextAppProvider";
 import "../globals.scss";
 import "../ui-kit.scss";
-import { FC } from "react";
-import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { routing } from "@i18n/routing";
-import { notFound } from "next/navigation";
-import { inter } from "../fonts";
-import { getMessages } from "next-intl/server";
+import {FC} from "react";
+import {hasLocale, NextIntlClientProvider} from "next-intl";
+import {routing} from "@i18n/routing";
+import {notFound} from "next/navigation";
+import {inter} from "../fonts";
+import {getMessages} from "next-intl/server";
 
 export const metadata: Metadata = {
   title: "Портфолио",

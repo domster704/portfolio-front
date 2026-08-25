@@ -1,8 +1,5 @@
-import React, { FC } from "react";
+import React, {FC} from "react";
 import style from "./Preloader.module.scss";
-
-import preloaderGif from "../assets/preloader.gif";
-import Image from "next/image";
 
 interface PreloaderProps {
   title?: string;

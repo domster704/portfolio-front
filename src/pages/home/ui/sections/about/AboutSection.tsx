@@ -1,7 +1,7 @@
-import { type FC } from "react";
+import {type FC} from "react";
 import Section from "@shared/ui/section";
-import { useTranslations } from "next-intl";
-import { SECTIONS } from "@shared/constants/sections";
+import {useTranslations} from "next-intl";
+import {SECTIONS} from "@shared/constants/sections";
 import Wrapper from "@shared/ui/wrapper";
 
 const AboutSection: FC = ({}) => {

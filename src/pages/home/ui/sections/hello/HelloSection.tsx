@@ -1,7 +1,7 @@
-import { type FC } from "react";
+import {type FC} from "react";
 import style from "./HelloSection.module.scss";
 import Wrapper from "@shared/ui/wrapper";
-import { useTranslations } from "next-intl";
+import {useTranslations} from "next-intl";
 
 const year = new Date().getFullYear();
 

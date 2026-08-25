@@ -1,7 +1,7 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "@i18n/navigation";
+import {useLocale} from "next-intl";
+import {usePathname, useRouter} from "@i18n/navigation";
 import style from "./LanguageToggle.module.scss";
 
 const LanguageToggle = () => {
