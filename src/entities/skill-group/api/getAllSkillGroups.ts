@@ -1,5 +1,5 @@
-import {$apiURL} from "@shared/constants/api";
-import {SkillGroup, skillGroupsSchema,} from "@entities/skill-group/model/skill-group.schema";
+import { $apiURL } from "@shared/constants/api";
+import { SkillGroup, skillGroupsSchema } from "@entities/skill-group";
 
 export async function getAllSkillGroups(locale: string): Promise<SkillGroup[]> {
   const response = await fetch(

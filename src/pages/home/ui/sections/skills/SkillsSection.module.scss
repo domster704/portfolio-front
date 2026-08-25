@@ -1,39 +1,5 @@
 @use "@shared/styles/variables" as *;
 
-.skillContainer {
-  width: 100%;
-  overflow: hidden;
-
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.skillScroll {
-  display: flex;
-  width: max-content;
-
-  padding: 1.5rem 0;
-
-  animation: scroll 120s linear infinite;
-
-  span {
-    white-space: nowrap;
-
-    font-family: "JetBrains Mono", monospace;
-    font-size: 0.875rem;
-    color: var(--secondary);
-
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-
-    &::after {
-      content: "•";
-      margin: 0 1.75rem;
-      opacity: 0.5;
-    }
-  }
-}
-
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -41,90 +7,9 @@
   gap: 1rem 2rem;
 }
 
-.skillGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-
-  padding: 1.5rem;
-
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-
-  transition:
-    border-color 0.2s ease,
-    transform 0.3s ease;
-
-  &:hover {
-    border-color: var(--secondary);
-    transform: translateX(2px) translateY(-2px);
-  }
-}
-
-.skillList {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 0.5rem 0.75rem;
-}
-
-.skill {
-  display: inline-flex;
-  align-items: center;
-
-  min-height: 2.25rem;
-
-  padding: 0.5rem 0.85rem;
-
-  border: 1px solid var(--border);
-  border-radius: 2rem;
-
-  font-size: 0.9rem;
-  line-height: 1;
-
-  color: var(--primary);
-
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-
-  &:hover {
-    background: var(--foreground);
-    color: var(--tertiary);
-    transform: translateY(-2px);
-    cursor: pointer;
-  }
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @media (max-width: $mobile) {
-  .skillContainer {
-    margin-bottom: 3.5rem;
-  }
-
   .skillsGrid {
     grid-template-columns: 1fr;
     gap: 3rem;
-  }
-
-  .skillScroll {
-    animation-duration: 75s;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .skillScroll {
-    animation: none;
   }
 }

@@ -1,11 +1,11 @@
-import {type FC} from "react";
+import { type FC } from "react";
 import style from "./Header.module.scss";
 import ThemeToggle from "@shared/ui/theme-toggle";
 import LanguageToggle from "@shared/ui/language-toggle";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 import Wrapper from "@shared/ui/wrapper";
-import {Link} from "@i18n/navigation";
-import {SECTIONS} from "@shared/constants/sections";
+import { Link } from "@i18n/navigation";
+import { SECTIONS } from "@shared/constants/sections";
 
 const links = [
   {

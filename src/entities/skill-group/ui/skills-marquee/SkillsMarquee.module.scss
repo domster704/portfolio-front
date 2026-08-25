@@ -1,0 +1,61 @@
+@use "@shared/styles/variables" as *;
+
+.skillContainer {
+  width: 100%;
+  overflow: hidden;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.skillScroll {
+  display: flex;
+  width: max-content;
+
+  padding: 1.5rem 0;
+
+  animation: scroll 120s linear infinite;
+
+  span {
+    white-space: nowrap;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.875rem;
+    color: var(--secondary);
+
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    &::after {
+      content: "•";
+      margin: 0 1.75rem;
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: $mobile) {
+  .skillContainer {
+    margin-bottom: 3.5rem;
+  }
+
+  .skillScroll {
+    animation-duration: 75s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skillScroll {
+    animation: none;
+  }
+}

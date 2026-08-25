@@ -1,7 +1,7 @@
-import {type FC} from "react";
+import { type FC } from "react";
 import style from "./HelloSection.module.scss";
 import Wrapper from "@shared/ui/wrapper";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 const year = new Date().getFullYear();
 
@@ -10,8 +10,10 @@ const HelloSection: FC = ({}) => {
 
   return (
     <section className={style.hello}>
-      <p className={["label", style.slide].join(" ")}>{t("job-name")}</p>
-      <p className={["label", style.year].join(" ")}>{year}</p>
+      <p className={["label section", style.slide].join(" ")}>
+        {t("job-name")}
+      </p>
+      <p className={["label section", style.year].join(" ")}>{year}</p>
 
       <Wrapper className={style.container}>
         <div>
