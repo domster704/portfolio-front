@@ -19,6 +19,7 @@
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
+  margin-bottom: 0.375rem;
 }
 
 .title-4 {
@@ -32,8 +33,11 @@
 
   font-size: 0.75rem;
   color: var(--secondary);
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
+
+  &.section {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
 }
 
 .text {
@@ -47,6 +51,10 @@
     color: var(--secondary);
   }
 
+  &.primary {
+    color: var(--primary);
+  }
+
   &.secondary {
     color: var(--secondary);
   }
@@ -54,4 +62,8 @@
   &.mono {
     font-family: "JetBrains Mono", monospace;
   }
+}
+
+b.text {
+  font-weight: bolder;
 }

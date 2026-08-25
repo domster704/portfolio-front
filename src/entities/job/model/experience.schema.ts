@@ -4,14 +4,13 @@ export const experienceSchema = z.object({
   id: z.number(),
 
   companyName: z.string(),
-  companyURL: z.url(),
+  companyURL: z.url().nullable(),
 
   about: z.string(),
 
   date: z.string(),
 
   position: z.string(),
-  subPosition: z.array(z.string()),
 
   skills: z.array(z.string()),
 

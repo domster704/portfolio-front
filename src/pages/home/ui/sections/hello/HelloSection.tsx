@@ -9,14 +9,14 @@ const HelloSection: FC = ({}) => {
   const t = useTranslations("Hello");
 
   return (
-    <div className={style.hello}>
+    <section className={style.hello}>
       <p className={["label", style.slide].join(" ")}>{t("job-name")}</p>
       <p className={["label", style.year].join(" ")}>{year}</p>
 
       <Wrapper className={style.container}>
         <div>
           <p className={"title-3"}>{t("status")}</p>
-          <p className={"label"}>{t("status_info")}</p>
+          <p className={"label section"}>{t("status_info")}</p>
         </div>
 
         <h1 className={["title-1", style.title].join(" ")}>{t("title")}</h1>
@@ -26,7 +26,7 @@ const HelloSection: FC = ({}) => {
           })}
         </p>
       </Wrapper>
-    </div>
+    </section>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import style from "./Preloader.module.css";
+import style from "./Preloader.module.scss";
 
 import preloaderGif from "../assets/preloader.gif";
 import Image from "next/image";
@@ -17,18 +17,13 @@ const Preloader: FC<PreloaderProps> = ({
 }) => {
   return (
     <div className={style.loader} role="status" aria-live="polite">
-      <Image
-        src={preloaderGif}
-        alt=""
-        width={preloaderGif.width}
-        height={preloaderGif.height}
-        loading="eager"
-      />
+      <div className={style.loaderSpin}></div>
 
       {withText && (
         <>
-          <b>{title}</b>
-          <p>{description}</p>
+          <br />
+          <b className={"text"}>{title}</b>
+          <p className={"text primary"}>{description}</p>
         </>
       )}
     </div>

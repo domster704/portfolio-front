@@ -4,8 +4,8 @@ import {
 } from "@entities/job/model/experience.schema";
 import { $apiURL } from "@shared/constants/api";
 
-export async function getAllExperience(): Promise<Experience[]> {
-  const response = await fetch(`${$apiURL}/jobs`, {
+export async function getAllExperience(locale: string): Promise<Experience[]> {
+  const response = await fetch(`${$apiURL}/jobs?locale=${locale}`, {
     next: {
       revalidate: 3600,
     },

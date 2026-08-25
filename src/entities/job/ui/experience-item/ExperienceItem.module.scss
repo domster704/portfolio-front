@@ -1,2 +1,14 @@
-.content {
+.experienceItem {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  gap: 3rem;
+
+  padding: 2.5rem 0;
+  border-top: 1px var(--border) solid;
+}
+
+.description {
+  p:not(:first-child) {
+    margin-top: 1rem;
+  }
 }
