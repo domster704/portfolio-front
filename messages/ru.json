@@ -34,6 +34,13 @@
   },
   "Education": {
     "title": "Академический путь.",
-    "label": "Образование"
+    "label": "Образование",
+    "educationTypes": {
+      "bachelor": "Бакалавриат",
+      "master": "Магистратура",
+      "professionalRetraining": "Профессиональная переподготовка",
+      "additionalEducation": "Дополнительное образование",
+      "course": "Курс"
+    }
   }
 }

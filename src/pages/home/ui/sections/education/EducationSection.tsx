@@ -1,16 +1,30 @@
-import { type FC } from "react";
-import { useTranslations } from "next-intl";
 import Section from "@shared/ui/section";
 import { SECTIONS } from "@shared/constants/sections";
 import Wrapper from "@shared/ui/wrapper";
+import { getLocale, getTranslations } from "next-intl/server";
+import { getAllEducations } from "@entities/education";
+import EducationItem from "@entities/education/ui/education-item";
 
-const EducationSection: FC = ({}) => {
-  const t = useTranslations("Education");
+const EducationSection = async () => {
+  const locale = await getLocale();
+  const t = await getTranslations("Education");
+
+  const educations = await getAllEducations(locale);
 
   return (
     <Wrapper>
       <Section id={SECTIONS.EDUCATION} title={t("title")} label={t("label")}>
-        <div></div>
+        <div>
+          {educations
+            .sort((a, b) => a.order - b.order)
+            .map((education, index) => (
+              <EducationItem
+                key={education.id}
+                item={education}
+                index={index}
+              />
+            ))}
+        </div>
       </Section>
     </Wrapper>
   );

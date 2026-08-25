@@ -34,6 +34,13 @@
   },
   "Education": {
     "title": "Academic background.",
-    "label": "Education"
+    "label": "Education",
+    "educationTypes": {
+      "bachelor": "Bachelor's Degree",
+      "master": "Master's Degree",
+      "professionalRetraining": "Professional Retraining",
+      "additionalEducation": "Additional Education",
+      "course": "Course"
+    }
   }
 }

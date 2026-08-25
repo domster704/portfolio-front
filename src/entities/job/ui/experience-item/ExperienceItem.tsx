@@ -10,9 +10,7 @@ interface ExperienceItemProps {
 const ExperienceItem: FC<ExperienceItemProps> = ({ item }) => {
   return (
     <article className={style.experienceItem}>
-      <span className={["label", style.experienceDates].join(" ")}>
-        {item.date}
-      </span>
+      <span className={"label large"}>{item.date}</span>
 
       <div>
         <h3 className={"title-3"}>{item.position}</h3>
@@ -29,7 +27,7 @@ const ExperienceItem: FC<ExperienceItemProps> = ({ item }) => {
         )}
 
         <div
-          className={["text primary", style.description].join(" ")}
+          className={["text", style.description].join(" ")}
           dangerouslySetInnerHTML={{
             __html: sanitizeHtml(item.about),
           }}

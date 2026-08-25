@@ -1,0 +1,104 @@
+@use "@shared/styles/variables" as *;
+@use "@next/ui-kit" as *;
+
+.educationItem {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 3rem;
+
+  padding: 3rem 0;
+
+  border-top: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.index {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+
+  color: var(--border);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: inherit;
+  text-decoration: none;
+
+  span {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover span {
+    transform: translate(0.2rem, -0.2rem);
+  }
+}
+
+.specialization {
+  margin-top: 0.5rem;
+}
+
+.description {
+  max-width: 50rem;
+
+  color: var(--secondary);
+
+  p {
+    @include text;
+  }
+
+  p + p {
+    @include text-stack;
+  }
+
+  strong {
+    color: var(--primary);
+  }
+}
+
+@media (max-width: $mobile) {
+  .educationItem {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .meta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .index {
+    font-size: 2rem;
+  }
+
+  .header {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+}

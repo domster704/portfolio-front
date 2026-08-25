@@ -1,3 +1,5 @@
+@use "@next/ui-kit" as *;
+
 .experienceItem {
   display: grid;
   grid-template-columns: 15rem 1fr;
@@ -7,12 +9,12 @@
   border-top: 1px var(--border) solid;
 }
 
-.experienceDates {
-  font-size: 0.875rem;
-}
-
 .description {
-  p:not(:first-child) {
-    margin-top: 1rem;
+  p {
+    @include text;
+  }
+
+  p + p {
+    @include text-stack;
   }
 }

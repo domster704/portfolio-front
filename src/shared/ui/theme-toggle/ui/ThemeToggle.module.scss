@@ -1,0 +1,84 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  height: 2.5rem;
+  padding: 0 0.75rem;
+
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: transparent;
+  color: var(--primary);
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  color: var(--secondary);
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.track {
+  position: relative;
+
+  width: 2rem;
+  height: 1.125rem;
+
+  border-radius: 999px;
+
+  background: var(--border);
+
+  transition: background 0.25s ease;
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  left: 0.15rem;
+
+  width: 0.825rem;
+  height: 0.825rem;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  transform: translateY(-50%);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.trackDark {
+  .thumb {
+    transform: translate(0.875rem, -50%);
+  }
+}
