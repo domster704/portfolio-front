@@ -1,2 +1,11 @@
-.content {
+@use "@next/ui-kit" as *;
+
+.aboutSection {
+  p {
+    @include text;
+  }
+
+  p + p {
+    @include text-stack;
+  }
 }

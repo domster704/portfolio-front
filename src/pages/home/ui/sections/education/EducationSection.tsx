@@ -10,7 +10,7 @@ const EducationSection: FC = ({}) => {
   return (
     <Wrapper>
       <Section id={SECTIONS.EDUCATION} title={t("title")} label={t("label")}>
-        <></>
+        <div></div>
       </Section>
     </Wrapper>
   );

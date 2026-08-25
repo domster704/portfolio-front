@@ -41,15 +41,23 @@
   }
 }
 
-.text {
+@mixin text {
   font-size: clamp(1rem, 1.25vw, 1.25rem);
   font-weight: 400;
   line-height: 1.75;
   color: var(--primary);
+}
+
+@mixin text-stack {
+  margin-top: 1.12rem;
+  color: var(--secondary);
+}
+
+.text {
+  @include text;
 
   & + .text {
-    margin-top: 1.12rem;
-    color: var(--secondary);
+    @include text-stack;
   }
 
   &.primary {

@@ -1,12 +1,17 @@
-import { type FC } from "react";
 import Section from "@shared/ui/section";
-import { useTranslations } from "next-intl";
 import { SECTIONS } from "@shared/constants/sections";
+import style from "./AboutSection.module.scss";
 import Wrapper from "@shared/ui/wrapper";
+import { getLocale, getTranslations } from "next-intl/server";
+import { About, getAbout } from "@entities/about";
+import { sanitizeHtml } from "@shared/lib/sanitize";
 
-const AboutSection: FC = ({}) => {
-  const t = useTranslations("About");
-  const headerT = useTranslations("Header");
+const AboutSection = async () => {
+  const locale = await getLocale();
+  const t = await getTranslations("About");
+  const headerT = await getTranslations("Header");
+
+  const about: About = await getAbout(locale);
 
   return (
     <Wrapper>
@@ -16,9 +21,12 @@ const AboutSection: FC = ({}) => {
         title={t("title")}
         label={headerT("about")}
       >
-        <p className={"text"}>{t("description.1")}</p>
-        <p className={"text"}>{t("description.2")}</p>
-        <p className={"text"}>{t("description.3")}</p>
+        <div
+          className={style.aboutSection}
+          dangerouslySetInnerHTML={{
+            __html: sanitizeHtml(about.description),
+          }}
+        ></div>
       </Section>
     </Wrapper>
   );

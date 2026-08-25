@@ -26,7 +26,7 @@ const Section: FC<SectionProps> = ({
         <h2 className="title-2">{title}</h2>
       </header>
 
-      <div>{children}</div>
+      {children}
     </section>
   );
 };

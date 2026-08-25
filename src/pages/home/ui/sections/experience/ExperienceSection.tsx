@@ -13,11 +13,13 @@ const ExperienceSection = async ({}) => {
   return (
     <Wrapper>
       <Section id={SECTIONS.EXPERIENCE} title={t("title")} label={t("label")}>
-        {experiences
-          .sort((a, b) => a.order - b.order)
-          .map((experience) => {
-            return <ExperienceItem item={experience} key={experience.id} />;
-          })}
+        <div>
+          {experiences
+            .sort((a, b) => a.order - b.order)
+            .map((experience) => {
+              return <ExperienceItem item={experience} key={experience.id} />;
+            })}
+        </div>
       </Section>
     </Wrapper>
   );
