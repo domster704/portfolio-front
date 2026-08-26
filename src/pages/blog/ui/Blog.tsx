@@ -1,9 +1,8 @@
 import { type FC } from "react";
 import style from "./Blog.module.scss";
 
-interface BlogProps {}
 
-const Blog: FC<BlogProps> = ({}) => {
+const Blog: FC = async () => {
   return <div className={style.content}>content</div>;
 };
 
