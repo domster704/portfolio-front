@@ -9,7 +9,7 @@ interface SkillGroupProps {
 const SkillGroupCard: FC<SkillGroupProps> = ({ group }) => {
   return (
     <article key={group.id} className={style.skillGroup}>
-      <h4 className={"title-4"}>{group.title}</h4>
+      <h3 className={"title-4"}>{group.title}</h3>
 
       <div className={style.skillList}>
         {group.skills.map((skill: string) => (

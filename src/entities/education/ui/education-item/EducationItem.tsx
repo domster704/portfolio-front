@@ -28,14 +28,16 @@ const EducationItem: FC<EducationItemProps> = ({ item, index }) => {
       <div className={style.content}>
         <div className={style.header}>
           <div>
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={style.name}
-            >
-              <h3 className="title-3">{item.name}</h3>
-            </a>
+            <h3 className="title-3">
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={style.name}
+              >
+                {item.name}
+              </a>
+            </h3>
 
             <h4 className={["label section", style.specialization].join(" ")}>
               {item.specialization}

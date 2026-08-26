@@ -51,21 +51,23 @@ const Header: FC = () => {
   return (
     <header className={style.header}>
       <Wrapper className={style.headerInner}>
-        <a href="#" className={style.logo}>
+        <a href="#top" className={style.logo}>
           Domster704.
         </a>
 
-        <ul className={style.links}>
-          {links.map((link) => (
-            <li key={link.label}>
-              {link.type === "anchor" ? (
-                <a href={link.href}>{t(link.label)}</a>
-              ) : (
-                <Link href={link.href}>{t(link.label)}</Link>
-              )}
-            </li>
-          ))}
-        </ul>
+        <nav aria-label={t("navigation")}>
+          <ul className={style.links}>
+            {links.map((link) => (
+              <li key={link.label}>
+                {link.type === "anchor" ? (
+                  <a href={link.href}>{t(link.label)}</a>
+                ) : (
+                  <Link href={link.href}>{t(link.label)}</Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div className={style.contacts}>
           <ThemeToggle />

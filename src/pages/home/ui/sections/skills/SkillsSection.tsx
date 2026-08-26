@@ -17,13 +17,13 @@ const SkillsSection = async () => {
 
   const skillGroups: SkillGroup[] = await getAllSkillGroups(locale);
 
-  const SKILL_NAMES = Array.from(
-    new Set(skillGroups.flatMap((group) => group.skills)),
-  );
+  const marqueeSkills = skillGroups
+    .flatMap((group) => group.skills)
+    .filter((_, index) => index < 40);
 
   return (
     <>
-      <SkillsMarquee skills={SKILL_NAMES} />
+      <SkillsMarquee skills={marqueeSkills} />
 
       <Wrapper>
         <Section id={SECTIONS.SKILLS} title={t("title")} label={t("label")}>
