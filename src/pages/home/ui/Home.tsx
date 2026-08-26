@@ -14,7 +14,7 @@ const Home: FC = ({}) => {
       <SkillsSection />
       <ExperienceSection />
       <EducationSection />
-      <ProjectsSection />
+      {/*<ProjectsSection />*/}
     </>
   );
 };
