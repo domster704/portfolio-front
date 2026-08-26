@@ -1,10 +1,12 @@
 import { type FC } from "react";
-import HelloSection from "@pages/home/ui/sections/hello/HelloSection";
-import AboutSection from "@pages/home/ui/sections/about/AboutSection";
-import SkillsSection from "@pages/home/ui/sections/skills/SkillsSection";
-import ExperienceSection from "@pages/home/ui/sections/experience/ExperienceSection";
-import ProjectsSection from "@pages/home/ui/sections/projects/ProjectsSection";
-import EducationSection from "@pages/home/ui/sections/education/EducationSection";
+import {
+  AboutSection,
+  EducationSection,
+  ExperienceSection,
+  HelloSection,
+  ProjectsSection,
+  SkillsSection,
+} from "@pages/home/ui/sections";
 
 const Home: FC = ({}) => {
   return (
@@ -14,7 +16,7 @@ const Home: FC = ({}) => {
       <SkillsSection />
       <ExperienceSection />
       <EducationSection />
-      {/*<ProjectsSection />*/}
+      <ProjectsSection />
     </>
   );
 };

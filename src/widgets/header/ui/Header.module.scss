@@ -26,6 +26,9 @@
   gap: 1.5rem;
 }
 
+.navLinks {
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -64,7 +67,6 @@
   gap: 0.5rem;
 }
 
-/* Tablet */
 @media screen and (max-width: $tablet) {
   .header {
     padding: 1rem 0;
@@ -91,7 +93,6 @@
   }
 }
 
-/* Small tablet */
 @media screen and (max-width: $smallTablet) {
   .headerInner {
     flex-wrap: wrap;
@@ -105,17 +106,17 @@
     order: 2;
   }
 
-  .links {
+  .navLinks {
     order: 3;
+  }
 
+  .links {
     width: 100%;
-
     overflow-x: auto;
 
     gap: 1.5rem;
 
     padding-bottom: 0.25rem;
-
     scrollbar-width: none;
 
     &::-webkit-scrollbar {
@@ -124,7 +125,6 @@
   }
 }
 
-/* Mobile */
 @media screen and (max-width: $mobile) {
   .header {
     padding: 0.85rem 0;

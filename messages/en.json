@@ -3,6 +3,10 @@
     "home": {
       "title": "Grigory Isupov — Full Stack Developer",
       "description": "Portfolio of Grigory Isupov, a Full Stack Developer focused on backend engineering, software architecture and infrastructure. Python, FastAPI, PostgreSQL, TypeScript, React, Next.js, Docker and DevOps."
+    },
+    "blog": {
+      "title": "Blog — Grigory Isupov",
+      "description": "Articles by Grigory Isupov about backend development, software architecture, infrastructure, DevOps, distributed systems and engineering practices."
     }
   },
   "Accessibility": {

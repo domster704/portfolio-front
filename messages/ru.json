@@ -3,6 +3,10 @@
     "home": {
       "title": "Григорий Исупов — Full Stack разработчик",
       "description": "Портфолио Григория Исупова — Full Stack разработчика с фокусом на backend, архитектуру и инфраструктуру. Python, FastAPI, PostgreSQL, TypeScript, React, Next.js, Docker и DevOps."
+    },
+    "blog": {
+      "title": "Блог — Григорий Исупов",
+      "description": "Статьи Григория Исупова о backend-разработке, архитектуре программных систем, инфраструктуре, DevOps, распределённых системах и инженерных практиках."
     }
   },
   "Accessibility": {

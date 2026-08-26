@@ -55,7 +55,7 @@ const Header: FC = () => {
           Domster704.
         </a>
 
-        <nav aria-label={t("navigation")}>
+        <nav aria-label={t("navigation")} className={style.navLinks}>
           <ul className={style.links}>
             {links.map((link) => (
               <li key={link.label}>

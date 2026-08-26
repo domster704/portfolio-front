@@ -8,7 +8,8 @@ import { routing } from "@i18n/routing";
 import { notFound } from "next/navigation";
 import { inter } from "../fonts";
 import { getMessages } from "next-intl/server";
-import { SITE_URL } from "@shared/constants/seo";
+import { SITE_URL } from "@shared/seo/variables";
+import { MainLayout } from "@app/layouts/MainLayout";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -61,7 +62,7 @@ const RootLayout: FC<LayoutProps<"/[locale]">> = async ({
       <body suppressHydrationWarning>
         <NextAppProvider>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <MainLayout>{children}</MainLayout>
           </NextIntlClientProvider>
         </NextAppProvider>
       </body>
