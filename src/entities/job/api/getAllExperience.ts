@@ -9,7 +9,7 @@ export async function getAllExperience(locale: string): Promise<Experience[]> {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to fetch experiences");
+    return [];
   }
 
   const data = await response.json();

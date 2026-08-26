@@ -1,7 +1,7 @@
 import { $apiURL } from "@shared/constants/api";
 import { About, aboutSchema } from "@entities/about";
 
-export async function getAbout(locale: string): Promise<About> {
+export async function getAbout(locale: string): Promise<About | null> {
   const response = await fetch(`${$apiURL}/about?locale=${locale}`, {
     next: {
       revalidate: 3600,
@@ -9,7 +9,7 @@ export async function getAbout(locale: string): Promise<About> {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to fetch about data");
+    return null;
   }
 
   const data = await response.json();

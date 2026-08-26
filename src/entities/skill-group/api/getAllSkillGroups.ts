@@ -12,7 +12,7 @@ export async function getAllSkillGroups(locale: string): Promise<SkillGroup[]> {
   );
 
   if (!response.ok) {
-    throw new Error("Failed to fetch skills");
+    return [];
   }
 
   const data = await response.json();

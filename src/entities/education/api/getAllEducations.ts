@@ -9,7 +9,7 @@ export async function getAllEducations(locale: string): Promise<Education[]> {
   });
 
   if (!response.ok) {
-    throw new Error("Failed to fetch educations");
+    return [];
   }
 
   const data = await response.json();

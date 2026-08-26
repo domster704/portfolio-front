@@ -11,7 +11,7 @@ const AboutSection = async () => {
   const t = await getTranslations("About");
   const headerT = await getTranslations("Header");
 
-  const about: About = await getAbout(locale);
+  const about: About | null = await getAbout(locale);
 
   return (
     <Wrapper>
@@ -24,7 +24,7 @@ const AboutSection = async () => {
         <div
           className={style.aboutSection}
           dangerouslySetInnerHTML={{
-            __html: sanitizeHtml(about.description),
+            __html: sanitizeHtml(about?.description || ""),
           }}
         ></div>
       </Section>
