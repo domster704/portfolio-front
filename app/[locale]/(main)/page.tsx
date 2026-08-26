@@ -37,7 +37,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: t("description"),
       siteName: "Grigory Isupov",
       locale: locale === "en" ? "en_US" : "ru_RU",
-      images: ["/og-image.png"],
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "Grigory Isupov — Portfolio",
+        },
+      ],
     },
 
     twitter: {

@@ -23,11 +23,19 @@ export default function manifest(): MetadataRoute.Manifest {
         src: "/icons/icon-192.webp",
         sizes: "192x192",
         type: "image/webp",
+        purpose: "any",
       },
       {
         src: "/icons/icon-512.webp",
         sizes: "512x512",
         type: "image/webp",
+        purpose: "any",
+      },
+      {
+        src: "/icons/icon-512.webp",
+        sizes: "512x512",
+        type: "image/webp",
+        purpose: "maskable",
       },
     ],
   };
