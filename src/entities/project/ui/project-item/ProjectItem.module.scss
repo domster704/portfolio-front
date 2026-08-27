@@ -1,0 +1,113 @@
+@use "@shared/styles/variables" as *;
+@use "@next/ui-kit" as *;
+
+.project {
+  display: grid;
+  grid-template-columns: 8rem 1fr 2fr;
+
+  gap: 1rem;
+
+  padding: 2.5rem 0;
+
+  border-top: 1px solid var(--border);
+
+  &:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.index {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+
+  color: var(--decorative-text);
+
+  font-variant-numeric: tabular-nums;
+}
+
+.metaInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.target {
+  width: max-content;
+  max-width: 15rem;
+
+  white-space: normal;
+}
+
+.header {
+  min-width: 0;
+}
+
+.title {
+  text-wrap: balance;
+}
+
+.description {
+  p {
+    @include text;
+  }
+
+  p + p {
+    @include text-stack;
+  }
+}
+
+.skills {
+  margin-top: 1.5rem;
+
+  color: var(--secondary);
+
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: $tablet) {
+  .project {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    padding: 2rem 0;
+  }
+
+  .meta {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 1rem;
+  }
+
+  .index {
+    font-size: 2rem;
+  }
+
+  .metaInfo {
+    align-items: flex-end;
+
+    text-align: right;
+  }
+
+  .target {
+    max-width: 14rem;
+  }
+
+  .title {
+    max-width: none;
+  }
+
+  .skills {
+    margin-top: 1.25rem;
+  }
+}

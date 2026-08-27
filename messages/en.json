@@ -57,5 +57,9 @@
       "additionalEducation": "Additional Education",
       "course": "Course"
     }
+  },
+  "Project": {
+    "title": "Selected projects.",
+    "label": "Projects"
   }
 }
