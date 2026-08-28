@@ -33,16 +33,21 @@ const links = [
     href: `#${SECTIONS.PROJECTS}`,
     label: "projects",
   },
+  // {
+  //   type: "anchor",
+  //   href: `#${SECTIONS.RESEARCH}`,
+  //   label: "research",
+  // },
   {
     type: "anchor",
-    href: `#${SECTIONS.RESEARCH}`,
-    label: "research",
+    href: `#${SECTIONS.CONTACT}`,
+    label: "contacts",
   },
-  {
-    type: "route",
-    href: "/blog",
-    label: "blog",
-  },
+  // {
+  //   type: "route",
+  //   href: "/blog",
+  //   label: "blog",
+  // },
 ] as const;
 
 const Header: FC = () => {

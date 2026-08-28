@@ -25,6 +25,12 @@
   --header-background: rgba(248, 248, 248, 0.82);
   --decorative-text: rgba(34, 34, 34, 0.35);
 
+  // Inverse
+  --inverse-background: #222;
+  --inverse-primary: #ffffff;
+  --inverse-secondary: rgba(255, 255, 255, 0.6);
+  --inverse-border: rgba(255, 255, 255, 0.14);
+
   color-scheme: light;
 }
 
@@ -39,6 +45,12 @@
   --border: rgba(255, 255, 255, 0.1);
   --header-background: rgba(24, 24, 24, 0.82);
   --decorative-text: rgba(255, 255, 255, 0.35);
+
+  // Inverse
+  --inverse-background: #ededed;
+  --inverse-primary: #121212;
+  --inverse-secondary: rgba(18, 18, 18);
+  --inverse-border: rgba(18, 18, 18, 0.14);
 
   color-scheme: dark;
 }

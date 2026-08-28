@@ -1,0 +1,96 @@
+@use "@shared/styles/variables" as *;
+
+.contacts {
+  --primary: var(--inverse-primary);
+  --secondary: var(--inverse-secondary);
+  --border: var(--inverse-border);
+
+  padding-block: var(--section-pad);
+
+  background: var(--inverse-background);
+  color: var(--primary);
+}
+
+.header {
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+}
+
+.list {
+  border-top: 1px solid var(--border);
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(8rem, 0.5fr) 1.5fr auto;
+  align-items: center;
+  gap: 2rem;
+
+  min-width: 0;
+
+  padding: 1.75rem 0;
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    opacity 0.2s ease,
+    padding-left 0.25s ease;
+
+  &:hover {
+    padding-left: 0.75rem;
+    opacity: 0.65;
+  }
+}
+
+.label {
+  color: var(--secondary);
+}
+
+.value {
+  min-width: 0;
+
+  overflow-wrap: anywhere;
+
+  font-size: clamp(1.25rem, 2.2vw, 2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+.arrow {
+  font-size: 1.25rem;
+  line-height: 1;
+
+  transition: transform 0.2s ease;
+}
+
+.contact:hover .arrow {
+  transform: translate(0.2rem, -0.2rem);
+}
+
+@media (max-width: $mobile) {
+  .header {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    margin-bottom: 3.5rem;
+  }
+
+  .contact {
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem 1rem;
+
+    padding: 1.5rem 0;
+  }
+
+  .label {
+    grid-column: 1 / -1;
+  }
+
+  .value {
+    font-size: 1.2rem;
+  }
+
+  .contact:hover {
+    padding-left: 0;
+  }
+}

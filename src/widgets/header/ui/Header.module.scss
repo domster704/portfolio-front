@@ -27,6 +27,7 @@
 }
 
 .navLinks {
+  overflow-x: auto;
 }
 
 .links {
@@ -65,6 +66,11 @@
   flex-shrink: 0;
 
   gap: 0.5rem;
+}
+
+.links a[href="#contact"] {
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
 }
 
 @media screen and (max-width: $tablet) {

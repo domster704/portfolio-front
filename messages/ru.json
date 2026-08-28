@@ -61,5 +61,17 @@
   "Project": {
     "title": "Избранные проекты.",
     "label": "Проекты"
+  },
+  "Contact": {
+    "label": "Контакты",
+    "title": "Давайте сделаем что-нибудь вместе.",
+    "items": {
+      "email": "Email",
+      "telegram": "Telegram",
+      "phone": "Телефон",
+      "whatsapp": "WhatsApp",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
   }
 }
