@@ -7,11 +7,20 @@ import { sanitizeHtml } from "@shared/lib/sanitize";
 interface ProjectItemProps {
   item: Project;
   index: number;
+  variant?: "list" | "card";
 }
 
-const ProjectItem: FC<ProjectItemProps> = ({ item, index }) => {
+const ProjectItem: FC<ProjectItemProps> = ({
+  item,
+  index,
+  variant = "list",
+}) => {
   return (
-    <article className={style.project}>
+    <article
+      className={[style.project, variant === "card" ? style.card : ""].join(
+        " ",
+      )}
+    >
       <aside className={style.meta}>
         <span className={style.index} aria-hidden="true">
           {String(index + 1).padStart(2, "0")}
@@ -32,7 +41,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ item, index }) => {
 
       <h3 className={["title-3", style.title].join(" ")}>{item.name}</h3>
 
-      <div>
+      <div className={style.content}>
         <div
           className={style.description}
           dangerouslySetInnerHTML={{
