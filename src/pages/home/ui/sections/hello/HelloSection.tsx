@@ -17,7 +17,7 @@ const HelloSection: FC = ({}) => {
 
       <Wrapper className={style.container}>
         <div>
-          <p className={"title-3"}>{t("status")}</p>
+          <p className={"title-2"}>{t("status")}</p>
           <p className={"label section"}>{t("status_info")}</p>
         </div>
 
@@ -29,6 +29,7 @@ const HelloSection: FC = ({}) => {
         <p className={["text", style.description].join(" ")}>
           {t.rich("description", {
             strong: (chunks) => <strong>{chunks}</strong>,
+            br: () => <br />,
           })}
         </p>
       </Wrapper>

@@ -20,9 +20,9 @@ const EducationItem: FC<EducationItemProps> = ({ item, index }) => {
           {String(index + 1).padStart(2, "0")}
         </span>
 
-        <span className="label">
-          {t(`educationTypes.${item.educationType}`)}
-        </span>
+        {/*<span className="label">*/}
+        {/*  {t(`educationTypes.${item.educationType}`)}*/}
+        {/*</span>*/}
       </aside>
 
       <div className={style.content}>
@@ -40,7 +40,8 @@ const EducationItem: FC<EducationItemProps> = ({ item, index }) => {
             </h3>
 
             <h4 className={["label section", style.specialization].join(" ")}>
-              {item.specialization}
+              {t(`educationTypes.${item.educationType}`)}
+              {/*{item.specialization}*/}
             </h4>
           </div>
 

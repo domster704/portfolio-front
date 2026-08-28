@@ -3,7 +3,7 @@
 
 .educationItem {
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 6rem 1fr;
   gap: 3rem;
 
   padding: 3rem 0;
@@ -61,7 +61,7 @@
 }
 
 .description {
-  max-width: 50rem;
+  max-width: 80%;
 
   color: var(--secondary);
 
@@ -72,13 +72,13 @@
   p + p {
     @include text-stack;
   }
-
-  strong {
-    color: var(--primary);
-  }
 }
 
 @media (max-width: $mobile) {
+  .description {
+    max-width: unset;
+  }
+
   .educationItem {
     grid-template-columns: 1fr;
     gap: 1.5rem;

@@ -122,5 +122,11 @@ button {
   }
 }
 
+@media screen and (min-width: $bigDesktop) {
+  :root {
+    --max-width: 1600px;
+  }
+}
+
 @media screen and (max-width: $mobile) {
 }

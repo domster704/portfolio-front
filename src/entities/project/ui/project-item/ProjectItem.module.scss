@@ -3,8 +3,8 @@
 
 .project {
   display: grid;
-  grid-template-columns: 8rem 1fr 2fr;
-  gap: 1rem;
+  grid-template-columns: 6rem 1fr 2fr;
+  gap: 2rem;
 
   padding: 2.5rem 0;
 
@@ -16,8 +16,6 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr;
   gap: 0;
-
-  min-height: 26rem;
 
   padding: 2rem;
 
@@ -45,7 +43,7 @@
   }
 
   .title {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   .content {

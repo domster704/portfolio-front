@@ -27,11 +27,11 @@ const ProjectItem: FC<ProjectItemProps> = ({
         </span>
 
         <div className={style.metaInfo}>
-          {item.target && (
-            <span className={["label", "section", style.target].join(" ")}>
-              {item.target}
-            </span>
-          )}
+          {/*{item.target && (*/}
+          {/*  <span className={["label", "section", style.target].join(" ")}>*/}
+          {/*    {item.target}*/}
+          {/*  </span>*/}
+          {/*)}*/}
 
           <time className="label large" dateTime={String(item.year)}>
             {item.year}

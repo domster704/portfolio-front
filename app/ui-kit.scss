@@ -6,7 +6,7 @@
 }
 
 .title-2 {
-  max-width: 1000px;
+  max-width: 1200px;
 
   font-size: clamp(2.5rem, 5.25vw, 5.25rem);
   font-weight: 200;
@@ -31,7 +31,7 @@
 .label {
   font-family: "JetBrains Mono", monospace;
 
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   letter-spacing: 0.02em;
   color: var(--secondary);
 
@@ -41,7 +41,7 @@
   }
 
   &.large {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 }
 
