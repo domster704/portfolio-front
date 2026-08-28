@@ -1,8 +1,8 @@
 {
   "Metadata": {
     "home": {
-      "title": "Григорий Исупов — Full Stack разработчик",
-      "description": "Портфолио Григория Исупова — Full Stack разработчика с фокусом на backend, архитектуру и инфраструктуру. Python, FastAPI, PostgreSQL, TypeScript, React, Next.js, Docker и DevOps."
+      "title": "Григорий Исупов — Backend & Software Engineer",
+      "description": "Портфолио Григория Исупова — Backend & Software Engineer с фокусом на backend, архитектуру и инфраструктуру. Python, FastAPI, PostgreSQL, TypeScript, React, Next.js, Docker и DevOps."
     },
     "blog": {
       "title": "Блог — Григорий Исупов",
@@ -24,20 +24,15 @@
     "navigation": "Main navigation"
   },
   "Hello": {
-    "seoTitle": "Григорий Исупов — Full Stack разработчик",
+    "seoTitle": "Григорий Исупов — Backend & Software Engineer разработчик",
     "status": "5 лет",
     "status_info": "Коммерческого опыта",
-    "job-name": "Full Stack разработчик",
+    "job-name": "Backend & Software Engineer",
     "title": "Привет",
-    "description": "Я <strong>Григорий</strong>, Full-Stack разработчик. Основной фокус — backend, архитектура приложений и инфраструктура, от проектирования системы до деплоя и поддержки в production."
+    "description": "Я <strong>Григорий</strong>, Backend & Software Engineer. Основной фокус — backend, архитектура приложений и инфраструктура, от проектирования системы до деплоя и поддержки в production."
   },
   "About": {
-    "title": "Разработка и проектирование, end-to-end.",
-    "description": {
-      "1": "Я Full Stack разработчик с почти 5 годами коммерческого опыта. Основной фокус — backend-разработка, проектирование архитектуры приложений и инфраструктуры, а также полный цикл разработки: от модели данных и API до деплоя, мониторинга и поддержки.",
-      "2": "В работе использую FastAPI, PostgreSQL, Redis, TypeScript, React и Next.js. Проектирую микросервисные системы с применением DDD и Clean Architecture, работаю с Docker, Nginx, Ansible и CI/CD. Мне важно не просто реализовать функциональность, а сделать решение понятным, поддерживаемым и устойчивым к дальнейшему развитию",
-      "3": "Помимо работы разработчиком, я являюсь научным писателем в области распределённых систем. Также являюсь победителем хакатона ЛЦТ 2025 и призёром ЛЦТ 2024"
-    }
+    "title": "Разработка и проектирование, end-to-end."
   },
   "Skills": {
     "title": "Технологии и инженерные компетенции.",

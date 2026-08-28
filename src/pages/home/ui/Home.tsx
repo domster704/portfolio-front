@@ -11,8 +11,6 @@ import {
 } from "@pages/home/ui/sections";
 
 import SectionSkeleton from "@shared/ui/section-skeleton";
-import { SECTIONS } from "@shared/constants/sections";
-import Wrapper from "@shared/ui/wrapper";
 
 const Home: FC = () => {
   return (
