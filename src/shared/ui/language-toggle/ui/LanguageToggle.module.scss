@@ -9,6 +9,22 @@
   border-radius: 999px;
 
   background: var(--background);
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    border-color: var(--secondary);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
 }
 
 .option {
@@ -21,39 +37,20 @@
 
   padding: 0 0.65rem;
 
-  border: none;
   border-radius: 999px;
 
-  background: transparent;
-
-  font-family: inherit;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1;
 
   color: var(--secondary);
 
-  cursor: pointer;
-
   transition:
     background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
-
-  &:hover {
-    color: var(--primary);
-  }
-
-  &:active {
-    transform: scale(0.97);
-  }
+    color 0.2s ease;
 }
 
 .active {
   background: var(--primary);
   color: var(--background);
-
-  &:hover {
-    color: var(--background);
-  }
 }

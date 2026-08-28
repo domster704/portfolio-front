@@ -32,18 +32,18 @@
     "description": "Я <strong>Григорий</strong>, Backend & Software Engineer. Основной фокус — backend, архитектура приложений и инфраструктура, от проектирования системы до деплоя и поддержки в production."
   },
   "About": {
-    "title": "Разработка и проектирование, end-to-end."
+    "title": "Разработка и проектирование, end-to-end"
   },
   "Skills": {
-    "title": "Технологии и инженерные компетенции.",
+    "title": "Технологии и инженерные компетенции",
     "label": "Навыки"
   },
   "Experience": {
-    "title": "Профессиональный путь.",
+    "title": "Профессиональный путь",
     "label": "Опыт работы"
   },
   "Education": {
-    "title": "Академический путь.",
+    "title": "Академический путь",
     "label": "Образование",
     "educationTypes": {
       "bachelor": "Бакалавриат",
@@ -54,17 +54,16 @@
     }
   },
   "Project": {
-    "title": "Избранные проекты.",
+    "title": "Избранные проекты",
     "label": "Проекты"
   },
   "Contact": {
     "label": "Контакты",
-    "title": "Давайте сделаем что-нибудь вместе.",
+    "title": "Давайте сделаем что-нибудь вместе",
     "items": {
       "email": "Email",
       "telegram": "Telegram",
       "phone": "Телефон",
-      "whatsapp": "WhatsApp",
       "github": "GitHub",
       "linkedin": "LinkedIn"
     }

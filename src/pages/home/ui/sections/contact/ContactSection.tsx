@@ -21,11 +21,6 @@ const contacts = [
     href: "tel:+79127458900",
   },
   {
-    key: "whatsapp",
-    value: "+7 912 745-89-00",
-    href: "https://wa.me/79127458900",
-  },
-  {
     key: "github",
     value: "github.com/domster704",
     href: "https://github.com/domster704",

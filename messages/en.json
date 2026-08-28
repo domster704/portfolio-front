@@ -32,18 +32,18 @@
     "description": "I’m <strong>Grigory</strong>, a software engineer focused on backend systems, architecture, and infrastructure — from the first design decisions to deployment and production support."
   },
   "About": {
-    "title": "Development, end-to-end."
+    "title": "Development, end-to-end"
   },
   "Skills": {
-    "title": "Stack and engineering expertise.",
+    "title": "Stack and engineering expertise",
     "label": "Skills"
   },
   "Experience": {
-    "title": "My professional journey.",
+    "title": "My professional journey",
     "label": "Experience"
   },
   "Education": {
-    "title": "Academic background.",
+    "title": "Academic background",
     "label": "Education",
     "educationTypes": {
       "bachelor": "Bachelor's Degree",
@@ -54,17 +54,16 @@
     }
   },
   "Project": {
-    "title": "Selected projects.",
+    "title": "Selected projects",
     "label": "Projects"
   },
   "Contact": {
     "label": "Contact",
-    "title": "Let’s build something together.",
+    "title": "Let’s build something together",
     "items": {
       "email": "Email",
       "telegram": "Telegram",
       "phone": "Phone",
-      "whatsapp": "WhatsApp",
       "github": "GitHub",
       "linkedin": "LinkedIn"
     }

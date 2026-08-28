@@ -9,40 +9,42 @@ const LanguageToggle = () => {
   const router = useRouter();
   const pathname = usePathname();
 
-  const changeLocale = (nextLocale: "ru" | "en") => {
-    if (nextLocale === locale) {
-      return;
-    }
+  const toggleLocale = () => {
+    const nextLocale = locale === "ru" ? "en" : "ru";
 
     router.replace(pathname, {
       locale: nextLocale,
+      scroll: false,
     });
   };
 
   return (
-    <div className={style.toggle} role="group" aria-label="Language">
-      <button
-        type="button"
+    <button
+      type="button"
+      className={style.toggle}
+      onClick={toggleLocale}
+      aria-label={
+        locale === "ru"
+          ? "Switch language to English"
+          : "Переключить язык на русский"
+      }
+    >
+      <span
         className={[style.option, locale === "ru" ? style.active : ""].join(
           " ",
         )}
-        onClick={() => changeLocale("ru")}
-        aria-pressed={locale === "ru"}
       >
         RU
-      </button>
+      </span>
 
-      <button
-        type="button"
+      <span
         className={[style.option, locale === "en" ? style.active : ""].join(
           " ",
         )}
-        onClick={() => changeLocale("en")}
-        aria-pressed={locale === "en"}
       >
         EN
-      </button>
-    </div>
+      </span>
+    </button>
   );
 };
 

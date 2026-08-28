@@ -57,7 +57,7 @@ const Header: FC = () => {
     <header className={style.header}>
       <Wrapper className={style.headerInner}>
         <a href="#top" className={style.logo}>
-          Domster704.
+          Domster704
         </a>
 
         <nav aria-label={t("navigation")} className={style.navLinks}>
