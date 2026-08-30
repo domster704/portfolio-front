@@ -36,7 +36,7 @@ const BlogArticle: FC<BlogArticleProps> = async ({ locale, slug }) => {
             {date}
           </time>
 
-          <h1 className={style.title}>{article.name}</h1>
+          <h1 className={"title-2"}>{article.name}</h1>
 
           <p className={["text secondary", style.description].join(" ")}>
             {article.description}
