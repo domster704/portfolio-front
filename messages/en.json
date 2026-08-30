@@ -67,5 +67,10 @@
       "github": "GitHub",
       "linkedin": "LinkedIn"
     }
+  },
+  "Blog": {
+    "label": "Blog",
+    "title": "Articles",
+    "empty": "There are no published articles yet."
   }
 }

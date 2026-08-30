@@ -1,0 +1,22 @@
+@use "@shared/styles/variables" as *;
+
+.index {
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1;
+
+  color: var(--decorative-text);
+  font-variant-numeric: tabular-nums;
+
+  @media (max-width: $tablet) {
+    .index {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    .index {
+      font-size: 2rem;
+    }
+  }
+}

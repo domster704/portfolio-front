@@ -3,6 +3,7 @@ import style from "./ProjectItem.module.scss";
 
 import { Project } from "@entities/project/model/project.schema";
 import { sanitizeHtml } from "@shared/lib/sanitize";
+import ItemIndex from "@shared/ui/index";
 
 interface ProjectItemProps {
   item: Project;
@@ -22,9 +23,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
       )}
     >
       <aside className={style.meta}>
-        <span className={style.index} aria-hidden="true">
-          {String(index + 1).padStart(2, "0")}
-        </span>
+        <ItemIndex index={index} />
 
         <div className={style.metaInfo}>
           {/*{item.target && (*/}

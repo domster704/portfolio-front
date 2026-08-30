@@ -4,6 +4,7 @@ const ALLOWED_TAGS = [
   "div",
   "p",
   "br",
+  "hr",
 
   "ul",
   "ol",
@@ -22,6 +23,17 @@ const ALLOWED_TAGS = [
 
   "a",
   "img",
+
+  "figure",
+  "figcaption",
+
+  "table",
+  "thead",
+  "tbody",
+  "tfoot",
+  "tr",
+  "th",
+  "td",
 
   "h2",
   "h3",
@@ -45,6 +57,13 @@ const ALLOWED_ATTRIBUTES: sanitize.IOptions["allowedAttributes"] = {
     "decoding",
     "class",
   ],
+
+  figure: ["class"],
+
+  table: ["class"],
+
+  th: ["colspan", "rowspan"],
+  td: ["colspan", "rowspan"],
 
   code: ["class"],
   pre: ["class"],
@@ -90,11 +109,7 @@ export function sanitizeHtml(html?: string | null): string {
         return true;
       }
 
-      if (frame.tag === "img" && !frame.attribs.src) {
-        return true;
-      }
-
-      return false;
+      return frame.tag === "img" && !frame.attribs.src;
     },
   });
 }

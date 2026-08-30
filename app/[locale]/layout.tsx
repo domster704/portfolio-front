@@ -7,7 +7,6 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@i18n/routing";
 import { notFound } from "next/navigation";
 import { inter } from "../fonts";
-import { getMessages } from "next-intl/server";
 import { SITE_URL } from "@shared/seo/variables";
 import { MainLayout } from "@app/layouts/MainLayout";
 
@@ -62,7 +61,6 @@ const RootLayout: FC<LayoutProps<"/[locale]">> = async ({
   if (!hasLocale(routing.locales, locale)) {
     notFound();
   }
-  const messages = await getMessages();
 
   return (
     <html
@@ -73,7 +71,7 @@ const RootLayout: FC<LayoutProps<"/[locale]">> = async ({
     >
       <body suppressHydrationWarning>
         <NextAppProvider>
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider>
             <MainLayout>{children}</MainLayout>
           </NextIntlClientProvider>
         </NextAppProvider>

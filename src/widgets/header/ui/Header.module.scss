@@ -1,10 +1,8 @@
 @use "@shared/styles/variables" as *;
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
 
   padding: 1.25rem 0;

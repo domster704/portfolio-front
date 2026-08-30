@@ -4,6 +4,7 @@ import style from "./EducationItem.module.scss";
 import { Education } from "@entities/education";
 import { sanitizeHtml } from "@shared/lib/sanitize";
 import { useTranslations } from "next-intl";
+import ItemIndex from "@shared/ui/index";
 
 interface EducationItemProps {
   item: Education;
@@ -16,9 +17,7 @@ const EducationItem: FC<EducationItemProps> = ({ item, index }) => {
   return (
     <article className={style.educationItem}>
       <aside className={style.meta}>
-        <span className={style.index}>
-          {String(index + 1).padStart(2, "0")}
-        </span>
+        <ItemIndex index={index} />
 
         {/*<span className="label">*/}
         {/*  {t(`educationTypes.${item.educationType}`)}*/}

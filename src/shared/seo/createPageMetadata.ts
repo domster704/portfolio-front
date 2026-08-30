@@ -12,6 +12,9 @@ interface CreatePageMetadataParams {
   enPath: string;
 
   image?: string;
+
+  type?: "website" | "article";
+  publishedTime?: string;
 }
 
 export function createPageMetadata({
@@ -21,6 +24,8 @@ export function createPageMetadata({
   ruPath,
   enPath,
   image = "/og-image.png",
+  type = "website",
+  publishedTime,
 }: CreatePageMetadataParams): Metadata {
   const canonical = locale === "en" ? enPath : ruPath;
 
@@ -39,17 +44,20 @@ export function createPageMetadata({
     },
 
     openGraph: {
-      type: "website",
+      type,
       url: canonical,
 
       title,
       description,
 
       siteName: "Grigory Isupov",
-
       locale: locale === "en" ? "en_US" : "ru_RU",
 
       images: [image],
+
+      ...(type === "article" && {
+        publishedTime,
+      }),
     },
 
     twitter: {

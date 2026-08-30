@@ -67,5 +67,10 @@
       "github": "GitHub",
       "linkedin": "LinkedIn"
     }
+  },
+  "Blog": {
+    "label": "Блог",
+    "title": "Статьи",
+    "empty": "Пока здесь нет опубликованных статей."
   }
 }
