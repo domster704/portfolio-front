@@ -1,17 +1,10 @@
 import { Experience, experiencesSchema } from "@entities/job";
-import { $apiURL } from "@shared/constants/api";
+import { apiFetch } from "@shared/api/client";
 
 export async function getAllExperience(locale: string): Promise<Experience[]> {
-  const response = await fetch(`${$apiURL}/jobs?locale=${locale}`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
-
-  if (!response.ok) {
+  try {
+    return await apiFetch(`/jobs?locale=${locale}`, experiencesSchema);
+  } catch {
     return [];
   }
-
-  const data = await response.json();
-  return experiencesSchema.parse(data.data);
 }

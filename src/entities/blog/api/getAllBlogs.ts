@@ -1,18 +1,10 @@
-import { $apiURL } from "@shared/constants/api";
 import { Blog, blogsSchema } from "@entities/blog";
+import { apiFetch } from "@shared/api/client";
 
 export async function getAllBlogs(locale: string): Promise<Blog[]> {
-  const response = await fetch(`${$apiURL}/blogs?locale=${locale}`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
-
-  if (!response.ok) {
+  try {
+    return await apiFetch(`/blogs?locale=${locale}`, blogsSchema);
+  } catch {
     return [];
   }
-
-  const data = await response.json();
-
-  return blogsSchema.parse(data.data);
 }

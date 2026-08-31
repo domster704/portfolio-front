@@ -1,17 +1,10 @@
-import { $apiURL } from "@shared/constants/api";
 import { Project, projectsSchema } from "@entities/project";
+import { apiFetch } from "@shared/api/client";
 
 export async function getAllProjects(locale: string): Promise<Project[]> {
-  const response = await fetch(`${$apiURL}/projects?locale=${locale}`, {
-    next: {
-      revalidate: 3600,
-    },
-  });
-
-  if (!response.ok) {
+  try {
+    return await apiFetch(`/projects?locale=${locale}`, projectsSchema);
+  } catch {
     return [];
   }
-
-  const data = await response.json();
-  return projectsSchema.parse(data.data);
 }

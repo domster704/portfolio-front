@@ -1,20 +1,10 @@
-import { $apiURL } from "@shared/constants/api";
 import { SkillGroup, skillGroupsSchema } from "@entities/skill-group";
+import { apiFetch } from "@shared/api/client";
 
 export async function getAllSkillGroups(locale: string): Promise<SkillGroup[]> {
-  const response = await fetch(
-    `${$apiURL}/skill?populate=group&locale=${locale}`,
-    {
-      next: {
-        revalidate: 3600,
-      },
-    },
-  );
-
-  if (!response.ok) {
+  try {
+    return await apiFetch(`/skill?locale=${locale}`, skillGroupsSchema);
+  } catch {
     return [];
   }
-
-  const data = await response.json();
-  return skillGroupsSchema.parse(data.data.group);
 }
