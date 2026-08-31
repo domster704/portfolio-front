@@ -5,3 +5,9 @@ export const inter = localFont({
   variable: "--font-inter",
   display: "swap",
 });
+
+export const jetbrainsMono = localFont({
+  src: "./fonts/JetBrainsMono-VariableFont_wght.woff2",
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});

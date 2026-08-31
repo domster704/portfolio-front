@@ -6,7 +6,7 @@ import { FC } from "react";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { routing } from "@i18n/routing";
 import { notFound } from "next/navigation";
-import { inter } from "../fonts";
+import { inter, jetbrainsMono } from "../fonts";
 import { SITE_URL } from "@shared/seo/variables";
 import { MainLayout } from "@app/layouts/MainLayout";
 
@@ -65,7 +65,7 @@ const RootLayout: FC<LayoutProps<"/[locale]">> = async ({
   return (
     <html
       lang={locale}
-      className={inter.variable}
+      className={[inter.variable, jetbrainsMono.variable].join(" ")}
       suppressHydrationWarning
       data-scroll-behavior="smooth"
     >

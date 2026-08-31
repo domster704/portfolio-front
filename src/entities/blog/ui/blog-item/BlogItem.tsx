@@ -17,20 +17,15 @@ const BlogItem: FC<BlogItemProps> = ({ item, index, locale }) => {
     day: "2-digit",
     month: "long",
     year: "numeric",
-  }).format(new Date(item.createdAt));
+  }).format(new Date(item.updatedAt));
 
   return (
     <article className={style.item}>
-      <Link
-        href={`/blog/${item.slug}`}
-        target="_parent"
-        rel="noopener noreferrer"
-        className={style.link}
-      >
+      <Link href={`/blog/${item.slug}`} className={style.link}>
         <aside className={style.meta}>
           <ItemIndex index={index} />
 
-          <time className="label large" dateTime={item.createdAt}>
+          <time className="label large" dateTime={item.updatedAt}>
             {date}
           </time>
         </aside>

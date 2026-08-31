@@ -20,6 +20,5 @@ export async function apiFetch<T>(
   }
 
   const json = await response.json();
-
   return schema.parse(json.data);
 }

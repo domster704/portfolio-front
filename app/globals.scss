@@ -49,7 +49,7 @@
   // Inverse
   --inverse-background: #ededed;
   --inverse-primary: #121212;
-  --inverse-secondary: rgba(18, 18, 18);
+  --inverse-secondary: rgba(18, 18, 18, 0.6);
   --inverse-border: rgba(18, 18, 18, 0.14);
 
   color-scheme: dark;
@@ -100,6 +100,10 @@ button {
   }
 }
 
+section[id] {
+  scroll-margin-top: 0rem;
+}
+
 .skip-link {
   position: fixed;
   top: 1rem;
@@ -128,4 +132,10 @@ button {
 }
 
 @media screen and (max-width: $mobile) {
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: initial;
+  }
 }

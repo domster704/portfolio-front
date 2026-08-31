@@ -7,6 +7,7 @@ export const blogSchema = z.object({
   description: z.string(),
 
   createdAt: z.string(),
+  updatedAt: z.string(),
   slug: z.string(),
 });
 

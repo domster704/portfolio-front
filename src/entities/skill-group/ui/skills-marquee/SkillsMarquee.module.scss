@@ -19,7 +19,7 @@
   span {
     white-space: nowrap;
 
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-jetbrains-mono), monospace;
     font-size: 0.875rem;
     color: var(--secondary);
 

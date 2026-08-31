@@ -3,7 +3,11 @@ import { apiFetch } from "@shared/api/client";
 
 export async function getAllSkillGroups(locale: string): Promise<SkillGroup[]> {
   try {
-    return await apiFetch(`/skill?locale=${locale}`, skillGroupsSchema);
+    const data = await apiFetch(
+      `/skill?populate=group&locale=${locale}`,
+      skillGroupsSchema,
+    );
+    return data.group;
   } catch {
     return [];
   }

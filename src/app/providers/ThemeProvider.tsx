@@ -4,7 +4,7 @@ import {
   createContext,
   type ReactNode,
   useContext,
-  useEffect,
+  useLayoutEffect,
   useSyncExternalStore,
 } from "react";
 
@@ -54,7 +54,7 @@ function setTheme(theme: Theme) {
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const theme = useSyncExternalStore(subscribe, getTheme, getServerTheme);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
 
