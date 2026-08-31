@@ -2,7 +2,7 @@ import Section from "@shared/ui/section";
 import { SECTIONS } from "@shared/constants/sections";
 import Wrapper from "@shared/ui/wrapper";
 import { getLocale, getTranslations } from "next-intl/server";
-import { getAllEducations, EducationItem } from "@entities/education";
+import { EducationItem, getAllEducations } from "@entities/education";
 
 const EducationSection = async () => {
   const locale = await getLocale();

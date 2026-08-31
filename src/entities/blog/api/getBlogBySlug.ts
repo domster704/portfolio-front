@@ -1,4 +1,3 @@
-import { $apiURL } from "@shared/constants/api";
 import {
   BlogArticle,
   blogArticlesSchema,
