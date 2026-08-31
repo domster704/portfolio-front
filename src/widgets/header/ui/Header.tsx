@@ -1,8 +1,8 @@
-import { type FC } from "react";
-import { useTranslations } from "next-intl";
+import {type FC} from "react";
+import {useTranslations} from "next-intl";
 
-import { Link } from "@i18n/navigation";
-import { SECTIONS } from "@shared/constants/sections";
+import {Link} from "@i18n/navigation";
+import {SECTIONS} from "@shared/constants/sections";
 import LanguageToggle from "@shared/ui/language-toggle";
 import ThemeToggle from "@shared/ui/theme-toggle";
 import Wrapper from "@shared/ui/wrapper";
@@ -61,8 +61,8 @@ const Header: FC = () => {
         </nav>
 
         <div className={style.contacts}>
-          <ThemeToggle />
-          <LanguageToggle />
+          <ThemeToggle/>
+          <LanguageToggle/>
         </div>
       </Wrapper>
     </header>

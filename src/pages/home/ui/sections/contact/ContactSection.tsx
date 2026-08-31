@@ -3,34 +3,7 @@ import Wrapper from "@shared/ui/wrapper";
 import { getTranslations } from "next-intl/server";
 import style from "./ContactSection.module.scss";
 import styleSection from "@shared/ui/section/ui/Section.module.scss";
-
-const contacts = [
-  {
-    key: "email",
-    value: "domster704@mail.ru",
-    href: "mailto:domster704@mail.ru",
-  },
-  {
-    key: "telegram",
-    value: "@domster704",
-    href: "https://t.me/domster704",
-  },
-  {
-    key: "phone",
-    value: "+7 912 745-89-00",
-    href: "tel:+79127458900",
-  },
-  {
-    key: "github",
-    value: "github.com/domster704",
-    href: "https://github.com/domster704",
-  },
-  {
-    key: "linkedin",
-    value: "linkedin.com/in/domster704",
-    href: "https://www.linkedin.com/in/domster704",
-  },
-] as const;
+import { contacts } from "@shared/constants/contacts";
 
 const ContactSection = async () => {
   const t = await getTranslations("Contact");
@@ -46,19 +19,19 @@ const ContactSection = async () => {
         </header>
 
         <div className={style.list}>
-          {contacts.map((contact) => {
+          {Object.entries(contacts).map(([key, contact]) => {
             const external = contact.href.startsWith("http");
 
             return (
               <a
-                key={contact.key}
+                key={key}
                 href={contact.href}
                 className={style.contact}
                 target={external ? "_blank" : undefined}
                 rel={external ? "noopener noreferrer" : undefined}
               >
                 <span className={["label large", style.label].join(" ")}>
-                  {t(`items.${contact.key}`)}
+                  {t(`items.${key}`)}
                 </span>
 
                 <span className={style.value}>{contact.value}</span>
