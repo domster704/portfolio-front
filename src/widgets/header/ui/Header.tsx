@@ -8,6 +8,7 @@ import ThemeToggle from "@shared/ui/theme-toggle";
 import Wrapper from "@shared/ui/wrapper";
 
 import style from "./Header.module.scss";
+import HeaderLogo from "@widgets/header/ui/HeaderLogo";
 
 const links = [
   {
@@ -46,9 +47,7 @@ const Header: FC = () => {
   return (
     <header className={style.header}>
       <Wrapper className={style.headerInner}>
-        <Link href="/" className={style.logo}>
-          Domster704
-        </Link>
+        <HeaderLogo />
 
         <nav aria-label={t("navigation")} className={style.navLinks}>
           <ul className={style.links}>

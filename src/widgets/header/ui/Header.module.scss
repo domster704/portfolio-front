@@ -51,8 +51,14 @@
 .logo {
   flex-shrink: 0;
 
+  background: transparent;
+  outline: none;
+  border: none;
+
   font-size: 1.25rem;
   font-weight: 700;
+
+  cursor: pointer;
 }
 
 .contacts {
