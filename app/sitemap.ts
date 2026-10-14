@@ -1,7 +1,7 @@
-import type { MetadataRoute } from "next";
+import type {MetadataRoute} from "next";
 
-import { getAllBlogs } from "@entities/blog";
-import { SITE_URL } from "@shared/seo/variables";
+import {getAllBlogs} from "@entities/blog";
+import {SITE_URL} from "@shared/seo/variables";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogs = await getAllBlogs("ru");

@@ -1,11 +1,11 @@
-import { type NextRequest } from "next/server";
-import { z } from "zod";
+import {type NextRequest} from "next/server";
+import {z} from "zod";
 
-import { mediaSchema } from "@entities/media";
-import { routing } from "@i18n/routing";
-import { apiFetch } from "@shared/api/client";
-import { ApiError } from "@shared/api/errors";
-import { getAssetUrl } from "@shared/lib/getAssetUrl";
+import {mediaSchema} from "@entities/media";
+import {routing} from "@i18n/routing";
+import {apiFetch} from "@shared/api/client";
+import {ApiError} from "@shared/api/errors";
+import {getAssetUrl} from "@shared/lib/getAssetUrl";
 
 const documentSchema = z.object({
   file: mediaSchema.nullish(),

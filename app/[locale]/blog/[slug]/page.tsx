@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 
-import { getBlogBySlug } from "@entities/blog";
+import {getBlogBySlug} from "@entities/blog";
 import BlogArticle from "@pages/blog-article";
-import { createPageMetadata } from "@shared/seo/createPageMetadata";
+import {createPageMetadata} from "@shared/seo/createPageMetadata";
 
 type Props = PageProps<"/[locale]/blog/[slug]">;
 

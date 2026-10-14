@@ -10,8 +10,6 @@ import Wrapper from "@shared/ui/wrapper";
 
 import style from "./RecommendationsSection.module.scss";
 import { getAssetUrl } from "@shared/lib/getAssetUrl";
-import Image from "next/image";
-import documentIcon from "@shared/assets/image/document.svg";
 
 const RecommendationsSection = async () => {
   const locale = await getLocale();
@@ -99,7 +97,25 @@ const RecommendationsSection = async () => {
                   })}
                 >
                   <div className={style.fileIcon} aria-hidden="true">
-                    <Image src={documentIcon} alt={"document.svg"} />
+                    <svg
+                      viewBox="0 0 48 56"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 2h19l13 13v35a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4Z"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinejoin="round"
+                      />
+                      <path
+                        d="M29 2v13h13M15 25h18M15 31h18"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                     <span>PDF</span>
                   </div>
 
