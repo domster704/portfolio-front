@@ -116,3 +116,9 @@
     height: 2.5rem;
   }
 }
+
+@media (min-width: ($tablet + 1px)) {
+  .list > article:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+}

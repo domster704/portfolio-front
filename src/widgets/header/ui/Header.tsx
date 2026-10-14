@@ -1,8 +1,9 @@
 import { type FC } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { getPathname, Link } from "@i18n/navigation";
 
-import { Link } from "@i18n/navigation";
 import { SECTIONS } from "@shared/constants/sections";
+
 import LanguageToggle from "@shared/ui/language-toggle";
 import ThemeToggle from "@shared/ui/theme-toggle";
 import Wrapper from "@shared/ui/wrapper";
@@ -47,6 +48,8 @@ const links = [
 
 const Header: FC = () => {
   const t = useTranslations("Header");
+  const locale = useLocale();
+  const homeHref = getPathname({ locale, href: "/" });
 
   return (
     <header className={style.header}>
@@ -57,7 +60,13 @@ const Header: FC = () => {
           <ul className={style.links}>
             {links.map((link) => (
               <li key={link.label}>
-                <Link href={link.href}>{t(link.label)}</Link>
+                {link.href.startsWith("/#") ? (
+                  <a href={`${homeHref}${link.href.slice(1)}`}>
+                    {t(link.label)}
+                  </a>
+                ) : (
+                  <Link href={link.href}>{t(link.label)}</Link>
+                )}
               </li>
             ))}
           </ul>
