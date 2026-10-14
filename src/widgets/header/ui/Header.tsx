@@ -32,6 +32,10 @@ const links = [
     label: "projects",
   },
   {
+    href: `/#${SECTIONS.RECOMMENDATIONS}`,
+    label: "recommendations",
+  },
+  {
     href: "/blog",
     label: "blog",
   },

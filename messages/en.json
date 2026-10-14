@@ -18,6 +18,7 @@
     "experience": "Experience",
     "education": "Education",
     "projects": "Projects",
+    "recommendations": "Recommendations",
     "research": "Research",
     "blog": "Blog",
     "contacts": "Contacts",
@@ -56,6 +57,19 @@
   "Project": {
     "title": "Selected projects",
     "label": "Projects"
+  },
+  "Recommendations": {
+    "title": "Recommendations",
+    "label": "Professional feedback",
+    "kind": "Employer recommendation",
+    "period": "Employment: {period}",
+    "present": "Present",
+    "documentLabel": "Letter of recommendation from {company}",
+    "pages": "{count, plural, one {# page} other {# pages}}",
+    "fileSize": "{size} KB",
+    "open": "Open letter",
+    "openLabel": "Open the recommendation from {company} in a new tab",
+    "download": "Download PDF"
   },
   "Contact": {
     "label": "Contact",

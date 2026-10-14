@@ -1,4 +1,4 @@
-import { Experience, experiencesSchema } from "@entities/job";
+import { Experience, experiencesSchema } from "@entities/experience";
 import { apiFetch } from "@shared/api/client";
 
 export async function getAllExperience(locale: string): Promise<Experience[]> {

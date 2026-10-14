@@ -18,6 +18,7 @@
     "experience": "Опыт",
     "education": "Образование",
     "projects": "Проекты",
+    "recommendations": "Рекомендации",
     "research": "Исследования",
     "blog": "Блог",
     "contacts": "Контакты",
@@ -56,6 +57,19 @@
   "Project": {
     "title": "Избранные проекты",
     "label": "Проекты"
+  },
+  "Recommendations": {
+    "title": "Рекомендации",
+    "label": "Отзывы о работе",
+    "kind": "Рекомендация работодателя",
+    "period": "Период работы: {period}",
+    "present": "по настоящее время",
+    "documentLabel": "Рекомендательное письмо от {company}",
+    "pages": "{count, plural, one {# страница} few {# страницы} many {# страниц} other {# страницы}}",
+    "fileSize": "{size} КБ",
+    "open": "Открыть письмо",
+    "openLabel": "Открыть рекомендацию от {company} в новой вкладке",
+    "download": "Скачать PDF"
   },
   "Contact": {
     "label": "Контакты",

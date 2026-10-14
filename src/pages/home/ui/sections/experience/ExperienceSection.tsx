@@ -2,7 +2,11 @@ import Section from "@shared/ui/section";
 import { SECTIONS } from "@shared/constants/sections";
 import Wrapper from "@shared/ui/wrapper";
 import { getLocale, getTranslations } from "next-intl/server";
-import { Experience, ExperienceItem, getAllExperience } from "@entities/job";
+import {
+  Experience,
+  ExperienceItem,
+  getAllExperience,
+} from "@entities/experience";
 
 const ExperienceSection = async ({}) => {
   const locale = await getLocale();

@@ -1,6 +1,6 @@
 import { type FC } from "react";
 import style from "./ExperienceItem.module.scss";
-import { Experience } from "@entities/job/model/experience.schema";
+import { Experience } from "@entities/experience/model/experience.schema";
 import { sanitizeHtml } from "@shared/lib/sanitize";
 
 interface ExperienceItemProps {

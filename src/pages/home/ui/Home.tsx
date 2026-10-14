@@ -7,6 +7,7 @@ import {
   ExperienceSection,
   HelloSection,
   ProjectsSection,
+  RecommendationsSection,
   SkillsSection,
 } from "@pages/home/ui/sections";
 
@@ -35,6 +36,10 @@ const Home: FC = () => {
 
       <Suspense fallback={<SectionSkeleton />}>
         <ProjectsSection />
+      </Suspense>
+
+      <Suspense fallback={<SectionSkeleton />}>
+        <RecommendationsSection />
       </Suspense>
 
       <Suspense fallback={<SectionSkeleton />}>

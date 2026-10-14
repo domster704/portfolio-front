@@ -1,0 +1,239 @@
+@use "@shared/styles/variables" as *;
+@use "@next/ui-kit" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18rem;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--background);
+}
+
+.content {
+  min-width: 0;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.date,
+.legalName,
+.period,
+.fileMeta,
+.note {
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.company {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.quote {
+  position: relative;
+
+  margin-block: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  border-left: 2px solid var(--border);
+
+  p {
+    @include text;
+    position: relative;
+  }
+}
+
+.quoteMark {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+
+  font-size: 7rem;
+  font-weight: 200;
+  line-height: 1;
+  color: var(--border);
+
+  pointer-events: none;
+  user-select: none;
+}
+
+.period {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.document {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+
+  min-width: 0;
+  padding: 2rem;
+
+  border-left: 1px solid var(--border);
+  background: var(--tertiary);
+}
+
+.fileIcon {
+  position: relative;
+
+  width: 3rem;
+  height: 3.5rem;
+
+  color: var(--primary);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  span {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 0.625rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+  }
+}
+
+.documentTitle {
+  margin-bottom: 0.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+
+  width: 100%;
+  margin-top: auto;
+}
+
+.openButton,
+.downloadButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+
+  transition: opacity 0.2s ease;
+}
+
+.openButton {
+  color: var(--inverse-primary);
+  background: var(--inverse-background);
+}
+
+.downloadButton {
+  border-color: var(--border);
+  color: var(--primary);
+}
+
+.note {
+  line-height: 1.6;
+}
+
+.list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.quote p {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+@media (hover: hover) {
+  .openButton,
+  .downloadButton {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .document {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem 1.25rem;
+
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .actions {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    margin-top: 0.5rem;
+  }
+
+  .note {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: $mobile) {
+  .content,
+  .document {
+    padding: 1.5rem;
+  }
+
+  .meta {
+    margin-bottom: 1.5rem;
+  }
+
+  .quote {
+    margin-block: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .openButton,
+  .downloadButton {
+    transition: none;
+  }
+}
