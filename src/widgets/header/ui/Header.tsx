@@ -65,7 +65,7 @@ const Header: FC = () => {
                     {t(link.label)}
                   </a>
                 ) : (
-                  <Link href={link.href}>{t(link.label)}</Link>
+                  <Link href={link.href} prefetch={false}>{t(link.label)}</Link>
                 )}
               </li>
             ))}
