@@ -1,6 +1,6 @@
-import type {Metadata} from "next";
-import {getTranslations} from "next-intl/server";
-import {createPageMetadata} from "@shared/seo/createPageMetadata";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { createPageMetadata } from "@shared/seo/createPageMetadata";
 
 type Props = PageProps<"/[locale]/blog">;
 

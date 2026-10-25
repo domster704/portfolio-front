@@ -1,9 +1,9 @@
-import type {Metadata} from "next";
-import {getTranslations} from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 import Home from "@pages/home";
 import PersonJsonLd from "@shared/ui/person-json-ld/PersonJsonLd";
-import {createPageMetadata} from "@shared/seo/createPageMetadata";
+import { createPageMetadata } from "@shared/seo/createPageMetadata";
 
 type Props = PageProps<"/[locale]">;
 

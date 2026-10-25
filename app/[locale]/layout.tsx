@@ -1,14 +1,14 @@
-import type {Metadata, Viewport} from "next";
-import {NextAppProvider} from "@app/providers/NextAppProvider";
+import type { Metadata, Viewport } from "next";
+import { NextAppProvider } from "@app/providers/NextAppProvider";
 import "../globals.scss";
 import "../ui-kit.scss";
-import {FC} from "react";
-import {hasLocale, NextIntlClientProvider} from "next-intl";
-import {routing} from "@i18n/routing";
-import {notFound} from "next/navigation";
-import {inter, jetbrainsMono} from "../fonts";
-import {SITE_URL} from "@shared/seo/variables";
-import {MainLayout} from "@app/layouts/MainLayout";
+import { FC } from "react";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@i18n/routing";
+import { notFound } from "next/navigation";
+import { inter, jetbrainsMono } from "../fonts";
+import { SITE_URL } from "@shared/seo/variables";
+import { MainLayout } from "@app/layouts/MainLayout";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

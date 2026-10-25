@@ -10,7 +10,6 @@ import Wrapper from "@shared/ui/wrapper";
 
 import style from "./RecommendationsSection.module.scss";
 import { getAssetUrl } from "@shared/lib/getAssetUrl";
-import { $apiURL, $assetsURL } from "@shared/constants/api";
 
 const RecommendationsSection = async () => {
   const locale = await getLocale();

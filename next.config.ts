@@ -1,4 +1,4 @@
-import type {NextConfig} from "next";
+import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
         hostname: "api.portfolio.ln-kr.ru",
         port: "",
         pathname: "/uploads/**",
-      }
+      },
     ],
   },
   turbopack: {
@@ -33,7 +33,7 @@ const nextConfig: NextConfig = {
         },
       ],
     },
-  }
+  },
 };
 
 export default withNextIntl(nextConfig);
