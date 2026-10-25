@@ -1,16 +1,16 @@
-import {getFormatter, getLocale, getTranslations} from "next-intl/server";
+import { getFormatter, getLocale, getTranslations } from "next-intl/server";
 
 import {
   getAllRecommendations,
   type Recommendation,
 } from "@entities/recommendation";
-import {SECTIONS} from "@shared/constants/sections";
+import { SECTIONS } from "@shared/constants/sections";
 import Section from "@shared/ui/section";
 import Wrapper from "@shared/ui/wrapper";
 
 import style from "./RecommendationsSection.module.scss";
-import {getAssetUrl} from "@shared/lib/getAssetUrl";
-import {$apiURL, $assetsURL} from "@shared/constants/api";
+import { getAssetUrl } from "@shared/lib/getAssetUrl";
+import { $apiURL, $assetsURL } from "@shared/constants/api";
 
 const RecommendationsSection = async () => {
   const locale = await getLocale();
@@ -31,19 +31,17 @@ const RecommendationsSection = async () => {
       >
         <div className={style.list}>
           {recommendations.map((item: Recommendation) => {
-            const {job, file} = item;
+            const { job, file } = item;
             const titleId = `recommendation-${item.documentId}`;
             const fileUrl = getAssetUrl(file.url);
             const period = job.date;
 
-            const downloadUrl = `${$assetsURL}${item.file.url}?locale=${encodeURIComponent(locale)}`;
-
-            console.log(downloadUrl)
+            // const downloadUrl = `${$assetsURL}${item.file.url}?locale=${encodeURIComponent(locale)}`;
 
             const fileMeta = [
               "PDF",
               ...(item.pageCount
-                ? [t("pages", {count: item.pageCount})]
+                ? [t("pages", { count: item.pageCount })]
                 : []),
               t("fileSize", {
                 size: format.number(Math.ceil(file.size)),
@@ -86,8 +84,8 @@ const RecommendationsSection = async () => {
 
                   <p className={style.period}>
                     {job.position}
-                    <br/>
-                    {t("period", {period})}
+                    <br />
+                    {t("period", { period })}
                   </p>
                 </div>
 
@@ -139,14 +137,14 @@ const RecommendationsSection = async () => {
                       <span aria-hidden="true">↗</span>
                     </a>
 
-                    <a
-                      className={style.downloadButton}
-                      href={downloadUrl}
-                      download={file.name}
-                    >
-                      {t("download")}
-                      <span aria-hidden="true">↓</span>
-                    </a>
+                    {/*<a*/}
+                    {/*  className={style.downloadButton}*/}
+                    {/*  href={downloadUrl}*/}
+                    {/*  download={file.name}*/}
+                    {/*>*/}
+                    {/*  {t("download")}*/}
+                    {/*  <span aria-hidden="true">↓</span>*/}
+                    {/*</a>*/}
                   </div>
 
                   {item.documentNote && (

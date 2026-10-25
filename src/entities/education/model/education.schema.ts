@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { mediaSchema } from "@entities/media";
+
 export const educationType = z.enum([
   "bachelor",
   "master",
@@ -18,9 +20,14 @@ export const educationSchema = z.object({
   date: z.string(),
 
   description: z.string(),
-  educationType: educationType,
+  educationType,
 
   order: z.number(),
+
+  documents: z
+    .array(mediaSchema)
+    .nullish()
+    .transform((documents) => documents ?? []),
 });
 
 export const educationsSchema = z.array(educationSchema);
